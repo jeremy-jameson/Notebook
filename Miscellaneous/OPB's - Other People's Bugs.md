@@ -8,4 +8,7 @@ Pasted from <[https://bugzilla.mozilla.org/show_bug.cgi?id=857672](https://bugzi
 
 [http://support.mozilla.org/en-US/questions/955424](http://support.mozilla.org/en-US/questions/955424)
 
+**Problem getting bootstrap.css to be included using wiredep**\
+From <[https://github.com/yeoman/generator-angular/issues/1116](https://github.com/yeoman/generator-angular/issues/1116)>
+
 
