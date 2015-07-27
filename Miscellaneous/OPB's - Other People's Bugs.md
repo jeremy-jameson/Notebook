@@ -36,3 +36,9 @@ In Notepad, change:
     prefix=${LOCALAPPDATA}\npm
     cache=${LOCALAPPDATA}\npm-cache
 ```
+
+## Visual Studio 2015
+
+![(screenshot)](https://assets.technologytoolbox.com/screenshots/BF/1541379F66011CFCFD77433DF3D55CDBC15C3EBF.png)
+
+
