@@ -56,7 +56,7 @@ From <[https://social.technet.microsoft.com/Forums/en-US/0e84eb26-ebd1-440d-b04f
 From <[https://social.technet.microsoft.com/Forums/en-US/fd436515-6423-4015-9afe-d7e6034909ab/windows-10-threshold-2-](https://social.technet.microsoft.com/Forums/en-US/fd436515-6423-4015-9afe-d7e6034909ab/windows-10-threshold-2-)[￼](￼)[edgesearch-issues-for-domain-joined-pcs](edgesearch-issues-for-domain-joined-pcs)>
 
 **[IE11] and Edge crash on start if customer use Roaming Profile (Win10 1511)**\
-From <[https://connect.microsoft.com/IE/feedback/details/2031419/ie11-and-edge-crash-on-start-if-customer-use-](https://connect.microsoft.com/IE/feedback/details/2031419/ie11-and-edge-crash-on-start-if-customer-use-)[￼](￼)[roaming-profile-win10-1511](roaming-profile-win10-1511)>\
+From <[https://connect.microsoft.com/IE/feedback/details/2031419/ie11-and-edge-crash-on-start-if-customer-use-roaming-profile-win10-1511](https://connect.microsoft.com/IE/feedback/details/2031419/ie11-and-edge-crash-on-start-if-customer-use-roaming-profile-win10-1511)>\
 ￼\
 **Win 10 1511 Post Upgrade Issues Start, Cortana, Edge, Action Center, Roaming Profiles**\
 From <[http://answers.microsoft.com/en-us/windows/forum/windows_10-performance/win-10-1511-post-upgrade-issues-start-cortana-](http://answers.microsoft.com/en-us/windows/forum/windows_10-performance/win-10-1511-post-upgrade-issues-start-cortana-)[￼](￼)[edge/7d2af4ef-3dda-4261-8b41-471eb343094b?page=5](edge/7d2af4ef-3dda-4261-8b41-471eb343094b?page=5)>
