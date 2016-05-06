@@ -30,6 +30,24 @@ Function desktop { Push-Location \\iceman\Users$\jjameson\Desktop }
 Function temp { Push-Location C:\NotBackedUp\Temp }
 
 Function toolbox { Push-Location C:\NotBackedUp\Public\Toolbox }
+
+Function Enable-SharePointCmdlets
+{
+    If ((Get-PSSnapin Microsoft.SharePoint.PowerShell `
+        -ErrorAction SilentlyContinue) -eq $null)
+    {
+        Write-Debug "Adding snapin (Microsoft.SharePoint.PowerShell)..."
+
+        $ver = $host | select version
+
+        If ($ver.Version.Major -gt 1)
+        {
+            $Host.Runspace.ThreadOptions = "ReuseThread"
+        }
+
+        Add-PSSnapin Microsoft.SharePoint.PowerShell
+    }
+}
 ```
 
 ---
