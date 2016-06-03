@@ -25,7 +25,7 @@ $Host.PrivateData.DebugForegroundColor = "Cyan"
 
 Set-Alias -Name sgdm -Value C:\NotBackedUp\Public\Toolbox\DiffMerge\DiffMerge.exe
 
-Function desktop { Push-Location \\iceman\Users$\jjameson\Desktop }
+Function desktop { Push-Location ('\\ICEMAN\Users$\' + $env:USERNAME + '\Desktop') }
 
 Function temp { Push-Location C:\NotBackedUp\Temp }
 
@@ -69,37 +69,3 @@ Set-AuthenticodeSignature -FilePath $PROFILE -Certificate $cert
 
 **How to show cursor in (Azure) Powershell**\
 From <[http://stackoverflow.com/questions/25394160/how-to-show-cursor-in-powershell](http://stackoverflow.com/questions/25394160/how-to-show-cursor-in-powershell)>
-
-## # Configure firewall rule for POSHPAIG (http://poshpaig.codeplex.com/)
-
----
-
-
-**FOOBAR8**
-
-```PowerShell
-$cred = Get-Credential FABRIKAM\jjameson-admin
-
-$computer = 'FAB-DC02'
-
-$script = "New-NetFirewallRule ``
-    -Name 'Remote Windows Update (Dynamic RPC)' ``
-    -DisplayName 'Remote Windows Update (Dynamic RPC)' ``
-    -Description 'Allows remote auditing and installation of Windows updates via POSHPAIG (http://poshpaig.codeplex.com/)' ``
-    -Group 'Technology Toolbox (Custom)' ``
-    -Program '%windir%\system32\dllhost.exe' ``
-    -Direction Inbound ``
-    -Protocol TCP ``
-    -LocalPort RPC ``
-    -Profile Domain ``
-    -Action Allow"
-
-$scriptBlock = [scriptblock]::Create($script)
-
-Invoke-Command -ComputerName $computer -Credential $cred -ScriptBlock $scriptBlock
-```
-
----
-
-
-
