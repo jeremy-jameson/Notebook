@@ -1,4 +1,4 @@
-﻿# Get-Channel9EventSessionDetail
+﻿# Get-Channel9EventSessionDetail.ps1
 
 Monday, June 27, 2016
 4:45 PM
