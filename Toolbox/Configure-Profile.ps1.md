@@ -94,5 +94,22 @@ Toggle-TaskbarPinnedItem "Visual Studio 2015" -Verbose
 
 ## Configure trusted sites for Visual Studio 2015
 
+The following items are required and are configured automatically by Visual Studio
+
+[https://go.microsoft.com](https://go.microsoft.com)\
+[https://login.microsoftonline.com](https://login.microsoftonline.com)\
+about://security_devenv.exe\
+[https://app.vssps.visualstudio.com](https://app.vssps.visualstudio.com)\
+[https://tfsprodch1acs01.accesscontrol.windows.net](https://tfsprodch1acs01.accesscontrol.windows.net)
+
+The following items are required -- but are not configured automatically by Visual Studio
+
 [https://secure.aadcdn.microsoftonline-p.com](https://secure.aadcdn.microsoftonline-p.com)\
 [https://auth.gfx.ms](https://auth.gfx.ms)
+
+The following items are required when using a Windows Live account -- but are not configured automatically by Visual Studio
+
+[https://client.hip.live.com](https://client.hip.live.com)\
+[https://login.live.com](https://login.live.com)
+
+
