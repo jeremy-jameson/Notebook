@@ -82,14 +82,19 @@ Function Toggle-TaskbarPinnedItem
     }
 }
 
-Toggle-StartMenuPinnedItem "Prince" -Verbose
-Toggle-StartMenuPinnedItem "Microsoft Expression Web 4" -Verbose
-Toggle-StartMenuPinnedItem "SQL Server 2014 Management Studio" -Verbose
+Function Configure-Profile
+{
+    Toggle-StartMenuPinnedItem "Prince" -Verbose
+    Toggle-StartMenuPinnedItem "Microsoft Expression Web 4" -Verbose
+    Toggle-StartMenuPinnedItem "SQL Server 2014 Management Studio" -Verbose
 
-Toggle-TaskbarPinnedItem "Developer Command Prompt for VS2015" -Verbose
-Toggle-TaskbarPinnedItem "Internet Explorer" -Verbose
-Toggle-TaskbarPinnedItem "Mozilla Firefox" -Verbose
-Toggle-TaskbarPinnedItem "Visual Studio 2015" -Verbose
+    Toggle-TaskbarPinnedItem "Developer Command Prompt for VS2015" -Verbose
+    Toggle-TaskbarPinnedItem "Internet Explorer" -Verbose
+    Toggle-TaskbarPinnedItem "Mozilla Firefox" -Verbose
+    Toggle-TaskbarPinnedItem "Visual Studio 2015" -Verbose
+}
+
+Configure-Profile
 ```
 
 ## Configure trusted sites for Visual Studio 2015
