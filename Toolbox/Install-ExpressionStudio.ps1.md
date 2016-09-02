@@ -54,6 +54,10 @@ Function Ensure-MountedDiskImage
 
 Function Install-ExpressionStudio
 {
+    Param(
+        $ProductKey
+    )
+
     $imagePath = '\\ICEMAN\Products\Microsoft\Expression Studio' `
         + '\en_expression_studio_4_ultimate_x86_dvd_537032.iso'
 
@@ -79,7 +83,7 @@ Function Install-ExpressionStudio
     Sleep -Seconds 1
 
     Write-Verbose "Entering license key..."
-    $setupWindow | Send-Keys "*****-T74X9-R7D63-JYMY8-*****"
+    $setupWindow | Send-Keys $productKey
     Sleep -Seconds 10
     $setupWindow | Send-Keys "%n"
     Sleep -Milliseconds 500
@@ -104,5 +108,5 @@ Function Install-ExpressionStudio
     Dismount-DiskImage -ImagePath $imagePath
 }
 
-Install-ExpressionStudio
+Install-ExpressionStudio -ProductKey "*****-T74X9-R7D63-JYMY8-*****"
 ```
