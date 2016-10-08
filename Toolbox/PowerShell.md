@@ -25,7 +25,30 @@ $Host.PrivateData.DebugForegroundColor = "Cyan"
 
 Set-Alias -Name sgdm -Value C:\NotBackedUp\Public\Toolbox\DiffMerge\DiffMerge.exe
 
-Function desktop { Push-Location ('\\ICEMAN\Users$\' + $env:USERNAME + '\Desktop') }
+Function desktop
+{
+    [String] $regPath = 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer'
+
+    [String] $desktopPath = Get-ItemProperty `
+        -Path "$regPath\User Shell Folders" `
+        -Name Desktop |
+        select -ExpandProperty Desktop
+
+    If ([String]::IsNullOrEmpty($desktopPath) -eq $true)
+    {
+        $desktopPath = Get-ItemProperty `
+            -Path "$regPath\Shell Folders" `
+            -Name Desktop |
+            select -ExpandProperty Desktop
+    }
+
+    If ([String]::IsNullOrEmpty($desktopPath) -eq $true)
+    {
+        Throw "Unable to determine Desktop path."
+    }
+
+    Push-Location $desktopPath
+}
 
 Function temp { Push-Location C:\NotBackedUp\Temp }
 
