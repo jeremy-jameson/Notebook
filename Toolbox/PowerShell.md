@@ -23,7 +23,18 @@ Notepad.exe $PROFILE
 $Host.PrivateData.VerboseForegroundColor = "DarkGray"
 $Host.PrivateData.DebugForegroundColor = "Cyan"
 
-Set-Alias -Name sgdm -Value C:\NotBackedUp\Public\Toolbox\DiffMerge\DiffMerge.exe
+If ($env:PROCESSOR_ARCHITECTURE -eq "AMD64")
+{
+    Set-Alias `
+        -Name sgdm `
+        -Value C:\NotBackedUp\Public\Toolbox\DiffMerge\x64\sgdm.exe
+}
+Else
+{
+    Set-Alias `
+        -Name sgdm `
+        -Value C:\NotBackedUp\Public\Toolbox\DiffMerge\x86\sgdm.exe
+}
 
 Function desktop
 {
