@@ -4,6 +4,8 @@ Thursday, August 4, 2016
 2:41 PM
 
 ```PowerShell
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+
 $ErrorActionPreference = "Stop"
 
 Import-Module C:\NotBackedUp\Public\Toolbox\PowerShell\WASP\WASP.dll
@@ -97,24 +99,45 @@ Function Configure-Profile
 Configure-Profile
 ```
 
-## Configure trusted sites for Visual Studio 2015
+```PowerShell
+cls
+```
 
-The following items are required and are configured automatically by Visual Studio
+## # Mirror Toolbox content
 
-[https://go.microsoft.com](https://go.microsoft.com)\
-[https://login.microsoftonline.com](https://login.microsoftonline.com)\
-about://security_devenv.exe\
-[https://app.vssps.visualstudio.com](https://app.vssps.visualstudio.com)\
-[https://tfsprodch1acs01.accesscontrol.windows.net](https://tfsprodch1acs01.accesscontrol.windows.net)
+```PowerShell
+$source = "\\iceman.corp.technologytoolbox.com\Public\Toolbox"
+$dest = "C:\NotBackedUp\Public\Toolbox"
 
-The following items are required -- but are not configured automatically by Visual Studio
+robocopy $source $dest /E /MIR
+```
 
-[https://secure.aadcdn.microsoftonline-p.com](https://secure.aadcdn.microsoftonline-p.com)\
-[https://auth.gfx.ms](https://auth.gfx.ms)
+```PowerShell
+cls
+```
 
-The following items are required when using a Windows Live account -- but are not configured automatically by Visual Studio
+## # Configure trusted sites for Visual Studio 2015
 
-[https://client.hip.live.com](https://client.hip.live.com)\
-[https://login.live.com](https://login.live.com)
+```PowerShell
+$trustedSites = @(
+    # The following items are required and are configured automatically by
+    # Visual Studio:
+    #"https://go.microsoft.com",
+    #"https://login.microsoftonline.com",
+    #"about://security_devenv.exe",
+    #"https://app.vssps.visualstudio.com",
+    #"https://tfsprodch1acs01.accesscontrol.windows.net",
+    # The following items are required -- but are not configured automatically
+    # by Visual Studio:
+    "https://secure.aadcdn.microsoftonline-p.com",
+    "https://auth.gfx.ms",
+    # The following items are required when using a Windows Live account -- but
+    # are not configured automatically by Visual Studio:
+    "https://client.hip.live.com",
+    "https://login.live.com"
+)
 
-
+C:\NotBackedUp\Public\Toolbox\PowerShell\Add-InternetSecurityZoneMapping.ps1 `
+    -Zone TrustedSites `
+    -Patterns $trustedSites
+```
