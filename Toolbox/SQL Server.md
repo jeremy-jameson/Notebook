@@ -26,3 +26,8 @@ Add-DNSServerResourceRecordA `
     -Name EXT-SQL01-A `
     -IPv4Address 192.168.10.205
 ```
+
+**SQL Server Maintenance Solution**\
+From <[https://ola.hallengren.com/](https://ola.hallengren.com/)>
+
+
