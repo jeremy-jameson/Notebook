@@ -13,39 +13,43 @@ $VerbosePreference = "Continue"
 
 Function Ensure-ActiveWindow
 {
+    [CmdletBinding()]
     Param(
-        $windowTitle
+        [Parameter(Position = 1, Mandatory = $true)]
+        [string] $WindowTitle
     )
 
-    Write-Verbose "Ensuring active window ($windowTitle)..."
+    Write-Verbose "Ensuring active window ($WindowTitle)..."
 
     Do
     {
         $activeWindow = Select-Window -ActiveWindow
 
-        If ($activeWindow.Title -eq $windowTitle)
+        If ($activeWindow.Title -eq $WindowTitle)
         {
             return $activeWindow
         }
 
-        Write-Debug "Waiting for window ($windowTitle) to be active..."
+        Write-Debug "Waiting for window ($WindowTitle) to be active..."
         Start-Sleep -Milliseconds 500
     } While($true)
 }
 
 Function Ensure-MountedDiskImage
 {
+    [CmdletBinding()]
     Param(
-        $imagePath
+        [Parameter(Position = 1, Mandatory = $true)]
+        [string] $ImagePath
     )
 
-    $imageDriveLetter = (Get-DiskImage -ImagePath $imagePath |
+    $imageDriveLetter = (Get-DiskImage -ImagePath $ImagePath|
         Get-Volume).DriveLetter
 
     If ($imageDriveLetter -eq $null)
     {
-        Write-Verbose "Mounting disk image ($imagePath)..."
-        $imageDriveLetter = (Mount-DiskImage -ImagePath $imagePath -PassThru |
+        Write-Verbose "Mounting disk image ($ImagePath)..."
+        $imageDriveLetter = (Mount-DiskImage -ImagePath $ImagePath -PassThru |
             Get-Volume).DriveLetter
     }
 
@@ -54,8 +58,10 @@ Function Ensure-MountedDiskImage
 
 Function Install-ExpressionStudio
 {
+    [CmdletBinding()]
     Param(
-        $ProductKey
+        [Parameter(Position = 1, Mandatory = $true)]
+        [string] $ProductKey
     )
 
     $imagePath = '\\ICEMAN\Products\Microsoft\Expression Studio' `
