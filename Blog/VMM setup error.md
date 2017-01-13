@@ -118,6 +118,4 @@ Ensure that the group name is valid, and cluster resource or group with the same
 ---
 
 
-![(screenshot)](https://assets.technologytoolbox.com/screenshots/AB/3D6C42BFEBDA3559B8B016B61DC2D2141C2707AB.png)
-
 
