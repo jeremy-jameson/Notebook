@@ -23,6 +23,10 @@ Notepad.exe $PROFILE
 $Host.PrivateData.VerboseForegroundColor = "DarkGray"
 $Host.PrivateData.DebugForegroundColor = "Cyan"
 
+Set-Alias `
+    -Name fciv `
+    -Value C:\NotBackedUp\Public\Toolbox\FCIV\fciv.exe
+
 If ($env:PROCESSOR_ARCHITECTURE -eq "AMD64")
 {
     Set-Alias `
