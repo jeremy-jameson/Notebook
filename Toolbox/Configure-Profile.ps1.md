@@ -14,7 +14,7 @@ cls
 ## # Mirror Toolbox content
 
 ```PowerShell
-$source = "\\iceman.corp.technologytoolbox.com\Public\Toolbox"
+$source = "\\tt-fs01.corp.technologytoolbox.com\Public\Toolbox"
 $dest = "C:\NotBackedUp\Public\Toolbox"
 
 robocopy $source $dest /E /MIR
