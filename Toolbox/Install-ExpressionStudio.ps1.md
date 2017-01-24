@@ -64,7 +64,7 @@ Function Install-ExpressionStudio
         [string] $ProductKey
     )
 
-    $imagePath = '\\ICEMAN\Products\Microsoft\Expression Studio' `
+    $imagePath = '\\TT-FS01\Products\Microsoft\Expression Studio' `
         + '\en_expression_studio_4_ultimate_x86_dvd_537032.iso'
 
     $imageDriveLetter = Ensure-MountedDiskImage $imagePath
