@@ -25,7 +25,7 @@ Tuesday, June 02, 2015
 ```Console
 mkdir C:\NotBackedUp\Temp\Captures
 
-netsh trace start capture=yes tracefile=C:\NotBackedUp\Temp\Captures\%COMPUTERNAME%.etl maxsize=300 overwrite=yes
+netsh trace start persistent=yes capture=yes tracefile=C:\NotBackedUp\Temp\Captures\%COMPUTERNAME%.etl maxsize=500 overwrite=yes
 ```
 
 ### Stop network capture
