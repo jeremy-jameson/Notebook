@@ -20,23 +20,33 @@ Tuesday, June 02, 2015
 
 ## Network capture
 
-### Start network capture
-
-```Console
-mkdir C:\NotBackedUp\Temp\Captures
-
-netsh trace start persistent=yes capture=yes tracefile=C:\NotBackedUp\Temp\Captures\%COMPUTERNAME%.etl maxsize=500 overwrite=yes
+```PowerShell
+cls
 ```
 
-### Stop network capture
+### # Start network capture
 
-```Console
+```PowerShell
+mkdir C:\NotBackedUp\Temp\Captures
+
+$traceFile = "C:\NotBackedUp\Temp\Captures\$env:COMPUTERNAME.etl"
+
+netsh trace start persistent=yes capture=yes tracefile=$traceFile maxsize=500 overwrite=yes
+```
+
+```PowerShell
+cls
+```
+
+### # Stop network capture
+
+```PowerShell
 netsh trace stop
 ```
 
-### Copy network capture for analysis
+### # Copy network capture for analysis
 
-```Console
+```PowerShell
 robocopy C:\NotBackedUp\Temp\Captures \\WOLVERINE\C$\NotBackedUp\Temp\Captures
 ```
 
