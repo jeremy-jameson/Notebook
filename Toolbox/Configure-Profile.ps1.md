@@ -3,21 +3,34 @@
 Thursday, August 4, 2016
 2:41 PM
 
-```Console
+```Text
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```
 
-```Console
+---
+
+
+**FOOBAR10 - Run as TECHTOOLBOX\\jjameson-admin**
+
+```PowerShell
 cls
 ```
 
 ## # Mirror Toolbox content
 
 ```PowerShell
-$source = "\\tt-fs01.corp.technologytoolbox.com\Public\Toolbox"
-$dest = "C:\NotBackedUp\Public\Toolbox"
+$sourcePath = "\\TT-FS01\Public\Toolbox"
+$destPath = "\\EXT-FOOBAR4.extranet.technologytoolbox.com" `
+    + "\C$\NotBackedUp\Public\Toolbox"
 
-robocopy $source $dest /E /MIR /XD "Microsoft SDKs"
+robocopy $sourcePath $destPath /E /MIR /XD "Microsoft SDKs"
+```
+
+---
+
+
+```PowerShell
+cls
 ```
 
 ## # Configure profile
