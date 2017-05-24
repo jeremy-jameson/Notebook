@@ -3,9 +3,42 @@
 Thursday, August 4, 2016
 5:33 PM
 
-```PowerShell
+```Text
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
+```
 
+---
+
+
+**FOOBAR10 - Run as TECHTOOLBOX\\jjameson-admin**
+
+```PowerShell
+cls
+```
+
+## # Copy installation media from internal file server
+
+```PowerShell
+$isoFile = "en_expression_studio_4_ultimate_x86_dvd_537032.iso"
+
+$sourcePath = "\\TT-FS01\Products\Microsoft\Expression Studio"
+
+$destPath = "\\EXT-FOOBAR4.extranet.technologytoolbox.com" `
+    + "\C$\NotBackedUp\Temp"
+
+robocopy $sourcePath $destPath $isoFile
+```
+
+---
+
+
+```PowerShell
+cls
+```
+
+## # Install Expression Studio
+
+```PowerShell
 Import-Module Storage
 Import-Module C:\NotBackedUp\Public\Toolbox\PowerShell\WASP\WASP.dll
 
@@ -64,7 +97,7 @@ Function Install-ExpressionStudio
         [string] $ProductKey
     )
 
-    $imagePath = '\\TT-FS01\Products\Microsoft\Expression Studio' `
+    $imagePath = 'C:\NotBackedUp\Temp' `
         + '\en_expression_studio_4_ultimate_x86_dvd_537032.iso'
 
     $imageDriveLetter = Ensure-MountedDiskImage $imagePath
