@@ -44,11 +44,28 @@ cls
 netsh trace stop
 ```
 
+---
+
+
+**WOLVERINE**
+
+```PowerShell
+cls
+```
+
 ### # Copy network capture for analysis
 
 ```PowerShell
-robocopy C:\NotBackedUp\Temp\Captures \\WOLVERINE\C$\NotBackedUp\Temp\Captures
+$source = "\\EXT-SQL01A.extranet.technologytoolbox.com" `
+    + "\C$\NotBackedUp\Temp\Captures"
+
+$destination = "C:\NotBackedUp\Temp\Captures"
+
+robocopy $source $destination /MOVE
 ```
+
+---
+
 
 ## # Copy Web server config files to Temp
 
