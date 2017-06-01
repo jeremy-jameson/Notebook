@@ -27,7 +27,10 @@ cls
 ### # Start network capture
 
 ```PowerShell
-mkdir C:\NotBackedUp\Temp\Captures
+If ((Test-Path C:\NotBackedUp\Temp\Captures) -eq $false)
+{
+    New-Item -ItemType Directory -Path C:\NotBackedUp\Temp\Captures
+}
 
 $traceFile = "C:\NotBackedUp\Temp\Captures\$env:COMPUTERNAME.etl"
 
