@@ -19,3 +19,10 @@ From <[https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-i
 & "C:\Users\jjameson\Downloads\vs_enterprise__1167797576.1490649074.exe" `
     --layout '\\TT-FS01\Products\Microsoft\Visual Studio 2017\Enterprise' --lang en-US
 ```
+
+## Update (2017-07-09)
+
+```PowerShell
+& "C:\Users\jjameson\Downloads\vs_Enterprise.exe" `
+    --layout 'C:\vs2017' --lang en-US
+```
