@@ -24,5 +24,5 @@ From <[https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-i
 
 ```PowerShell
 & "C:\Users\jjameson\Downloads\vs_Enterprise.exe" `
-    --layout 'C:\vs2017' --lang en-US
+    --layout 'C:\vs2017\Enterprise' --includeOptional --lang en-US
 ```
