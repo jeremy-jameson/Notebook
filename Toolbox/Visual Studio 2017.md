@@ -22,6 +22,9 @@ From <[https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-i
 
 ## Update (2017-07-09)
 
+**Visual Studio 2017 Professional/Enterprise Layout installation fails**\
+From <[https://developercommunity.visualstudio.com/solutions/79186/view.html](https://developercommunity.visualstudio.com/solutions/79186/view.html)>
+
 ```PowerShell
 & "C:\Users\jjameson\Downloads\vs_Enterprise.exe" `
     --layout 'C:\vs2017\Enterprise' --includeOptional --lang en-US
