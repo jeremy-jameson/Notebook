@@ -3,6 +3,43 @@
 Tuesday, May 19, 2015
 11:06 AM
 
+---
+
+
+**SQL Server Management Studio**
+
+## -- Create copy-only database backup
+
+```SQL
+DECLARE @databaseName VARCHAR(50) = 'WSS_Content'
+
+DECLARE @backupDirectory VARCHAR(255)
+
+EXEC master.dbo.xp_instance_regread
+    N'HKEY_LOCAL_MACHINE'
+    , N'Software\Microsoft\MSSQLServer\MSSQLServer'
+    , N'BackupDirectory'
+    , @backupDirectory OUTPUT
+
+DECLARE @backupFilePath VARCHAR(255) =
+    @backupDirectory + '\Full\' + @databaseName + '.bak'
+
+DECLARE @backupName VARCHAR(100) = @databaseName + '-Full Database Backup'
+
+BACKUP DATABASE @databaseName
+    TO DISK = @backupFilePath
+    WITH COMPRESSION
+        , COPY_ONLY
+        , INIT
+        , NAME = @backupName
+        , STATS = 10
+
+GO
+```
+
+---
+
+
 ## # Restart SQL Server
 
 ```PowerShell
