@@ -8,10 +8,12 @@ Tuesday, May 19, 2015
 
 **SQL Server Management Studio**
 
-## -- Create copy-only database backup
+## Backup/restore
+
+### -- Create copy-only database backup
 
 ```SQL
-DECLARE @databaseName VARCHAR(50) = 'WSS_Content'
+DECLARE @databaseName VARCHAR(50) = 'AdventureWorks2012'
 
 DECLARE @backupDirectory VARCHAR(255)
 
@@ -33,6 +35,30 @@ BACKUP DATABASE @databaseName
         , INIT
         , NAME = @backupName
         , STATS = 10
+
+GO
+```
+
+### -- Restore database backup (overwrite existing database)
+
+```SQL
+DECLARE @databaseName VARCHAR(50) = 'AdventureWorks2012'
+
+DECLARE @backupDirectory VARCHAR(255)
+
+EXEC master.dbo.xp_instance_regread
+    N'HKEY_LOCAL_MACHINE'
+    , N'Software\Microsoft\MSSQLServer\MSSQLServer'
+    , N'BackupDirectory'
+    , @backupDirectory OUTPUT
+
+DECLARE @backupFilePath VARCHAR(255) =
+    @backupDirectory + '\Full\' + @databaseName + '.bak'
+
+RESTORE DATABASE @databaseName
+    FROM DISK = @backupFilePath
+    WITH REPLACE
+        , STATS = 5
 
 GO
 ```
