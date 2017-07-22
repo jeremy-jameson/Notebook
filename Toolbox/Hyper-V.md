@@ -483,4 +483,45 @@ Start-VM -ComputerName $vmHost -Name $vmName
 ---
 
 
+```PowerShell
+cls
+```
 
+### # Create virtual machines
+
+Function GetRandomMachineName([String] \$prefix){    \$name = [System.IO.Path]::GetRandomFileName()\
+\$name = \$name.ToUpper()\
+\$name = [System.IO.Path]::GetFileNameWithoutExtension(\$name)\
+If ([String]::IsNullOrWhiteSpace(\$name) -eq \$false)    {        \$name = \$prefix + \$name    }\
+return \$name}
+
+1..2 |\
+% {
+
+```PowerShell
+$vmName = GetRandomMachineName "VM-"
+$vmPath = "\\TT-SOFS01\VM-Storage-Silver"
+$vhdFolderPath = "$vmPath\$vmName\Virtual Hard Disks"
+$vhdPath = "$vhdFolderPath\$vmName.vhdx"
+
+$sysPrepedImage = "\\TT-FS01\VM-Library\VHDs\WS2016-Std.vhdx"
+
+New-VM `
+    -Name $vmName `
+    -Path $vmPath `
+    -NewVHDPath $vhdPath `
+    -NewVHDSizeBytes 32GB `
+    -MemoryStartupBytes 2GB `
+    -SwitchName "Embedded Team Switch"
+
+Copy-Item $sysPrepedImage $vhdPath
+
+Set-VM `
+    -Name $vmName `
+    -ProcessorCount 2 `
+    -DynamicMemory `
+    -MemoryMaximumBytes 4GB
+
+Start-VM -Name $vmName
+}
+```
