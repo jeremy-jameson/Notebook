@@ -24,6 +24,15 @@ Tuesday, June 02, 2015
 cls
 ```
 
+### # Delete previous network captures
+
+```PowerShell
+If ((Test-Path C:\NotBackedUp\Temp\Captures) -eq $true)
+{
+    Remove-Item C:\NotBackedUp\Temp\Captures -Recurse
+}
+```
+
 ### # Start network capture
 
 ```PowerShell
