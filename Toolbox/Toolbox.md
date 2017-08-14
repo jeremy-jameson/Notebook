@@ -47,9 +47,21 @@ cls
 ```PowerShell
 $source = "\\TT-FS01.corp.technologytoolbox.com\Public\Toolbox"
 
-$computers = Get-ADComputer -Filter * | select -ExpandProperty Name
+$computers = Get-ADComputer -Filter * |
+    where { $_.Name -notin @(
+        'TT-HV02',
+        'TT-HV02-FC',
+        'TT-SOFS01',
+        'TT-SOFS01-FC',
+        'TT-SQL01',
+        'TT-SQL01-FC',
+        'TT-VMM01',
+        'TT-VMM01-FC') } |
+    select -ExpandProperty Name
 
 $computers | ForEach-Object {
+    Write-Host "Mirroring Toolbox content on computer ($_)..."
+
     $dest = '\\' + $_ + '\C$\NotBackedUp\Public\Toolbox'
 
     robocopy $source $dest /E /MIR /XD "Microsoft SDKs" /R:1 /W:1
