@@ -264,8 +264,19 @@ cls
 ### # Extend partition
 
 ```PowerShell
-$size = (Get-PartitionSupportedSize –DiskNumber 1 –PartitionNumber 1)
-Resize-Partition -DiskNumber 1 –PartitionNumber 1 -Size $size.SizeMax
+$driveLetter = "D"
+
+$partition = Get-Partition -DriveLetter $driveLetter |
+    where { $_.DiskNumber -ne $null }
+
+$size = (Get-PartitionSupportedSize `
+    -DiskNumber $partition.DiskNumber `
+    -PartitionNumber $partition.PartitionNumber)
+
+Resize-Partition `
+    -DiskNumber $partition.DiskNumber `
+    -PartitionNumber $partition.PartitionNumber `
+    -Size $size.SizeMax
 ```
 
 ## Issue - Not enough free space to install patches using Windows Update
