@@ -24,6 +24,10 @@ $Host.PrivateData.VerboseForegroundColor = "DarkGray"
 $Host.PrivateData.DebugForegroundColor = "Cyan"
 
 Set-Alias `
+    -Name code `
+    -Value "C:\Program Files\Microsoft VS Code\Code.exe"
+
+Set-Alias `
     -Name fciv `
     -Value C:\NotBackedUp\Public\Toolbox\FCIV\fciv.exe
 
