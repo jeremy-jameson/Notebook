@@ -83,7 +83,7 @@ $destination = "https://techtoolbox.file.core.windows.net/toolbox"
     /Source:$source `
     /Dest:$destination `
     /DestKey:$key `
-    /S
+    /S /XO
 ```
 
 ```PowerShell
@@ -101,7 +101,7 @@ $destination = "C:\NotBackedUp\Public\Toolbox"
     /Source:$source `
     /SourceKey:$key `
     /Dest:$destination `
-    /S
+    /S /XO
 ```
 
 ```PowerShell
