@@ -599,3 +599,31 @@ Set-SCVirtualNetworkAdapter `
     -IPv4AddressType Static `
     -IPv4Address $ipAddress
 ```
+
+## Compare folders to ensure identical copies of files
+
+```PowerShell
+cd C:\NotBackedUp\Securitas-CYCLOPS\EmployeePortal
+
+$LeftFolder = "C:\NotBackedUp\Securitas-CYCLOPS\EmployeePortal\Main"
+$RightFolder = "C:\NotBackedUp\Securitas-CYCLOPS\EmployeePortal\Dev\Lab4"
+
+Get-ChildItem $LeftFolder -Recurse |
+    Get-FileHash |
+    select @{Label="Path";Expression={$_.Path.Replace($LeftFolder,"")}},Hash |
+    Export-Csv -NoTypeInformation -Path Main.csv
+
+Get-ChildItem $RightFolder -Recurse |
+    Get-FileHash |
+    select @{Label="Path";Expression={$_.Path.Replace($RightFolder,"")}},Hash |
+    Export-Csv -NoTypeInformation -Path Lab4.csv
+
+C:\NotBackedUp\Public\Toolbox\DiffMerge\x64\sgdm.exe Main.csv Lab4.csv
+```
+
+#### Reference
+
+**Compare contents of two folders using PowerShell Get-FileHash**\
+From <[http://almoselhy.azurewebsites.net/2014/12/compare-contents-of-two-folders-using-powershell-get-filehash/](http://almoselhy.azurewebsites.net/2014/12/compare-contents-of-two-folders-using-powershell-get-filehash/)>
+
+
