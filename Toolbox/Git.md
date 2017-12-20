@@ -212,3 +212,13 @@ Notepad .gitignore
 
 git rm --cached <file>
 ```
+
+## Gitflow
+
+**A successful Git branching model**\
+From <[http://nvie.com/posts/a-successful-git-branching-model/](http://nvie.com/posts/a-successful-git-branching-model/)>
+
+**Gitflow Workflow**\
+From <[https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)>
+
+
