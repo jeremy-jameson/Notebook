@@ -428,11 +428,10 @@ cls
 ### # Make virtual machines highly available
 
 ```PowerShell
-$vmHost = Get-SCVMHost -ComputerName "TT-HV02A.corp.technologytoolbox.com"
-
 @('CYCLOPS-TEST', 'EXT-WAC02A', 'FAB-WEB01', 'POLARIS-TEST') |
     % {
         $vm = Get-SCVirtualMachine -Name $_
+        $vmHost = $vm.VMHost
 
         Move-SCVirtualMachine `
             -VM $vm `
@@ -500,16 +499,17 @@ cls
 
 ### # Create virtual machines
 
-Function GetRandomMachineName([String] \$prefix){    \$name = [System.IO.Path]::GetRandomFileName()\
-\$name = \$name.ToUpper()\
-\$name = [System.IO.Path]::GetFileNameWithoutExtension(\$name)\
-If ([String]::IsNullOrWhiteSpace(\$name) -eq \$false)    {        \$name = \$prefix + \$name    }\
-return \$name}
-
-1..2 |\
-% {
-
 ```PowerShell
+Function GetRandomMachineName([String] $prefix){    $name = [System.IO.Path]::GetRandomFileName()
+    $name = $name.ToUpper()
+    $name = [System.IO.Path]::GetFileNameWithoutExtension($name)
+
+    If ([String]::IsNullOrWhiteSpace($name) -eq $false)    {        $name = $prefix + $name    }
+
+    return $name}
+
+1..2 |
+% {
 $vmName = GetRandomMachineName "VM-"
 $vmPath = "\\TT-SOFS01\VM-Storage-Silver"
 $vhdFolderPath = "$vmPath\$vmName\Virtual Hard Disks"
