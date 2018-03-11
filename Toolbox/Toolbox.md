@@ -626,4 +626,15 @@ C:\NotBackedUp\Public\Toolbox\DiffMerge\x64\sgdm.exe Main.csv Lab4.csv
 **Compare contents of two folders using PowerShell Get-FileHash**\
 From <[http://almoselhy.azurewebsites.net/2014/12/compare-contents-of-two-folders-using-powershell-get-filehash/](http://almoselhy.azurewebsites.net/2014/12/compare-contents-of-two-folders-using-powershell-get-filehash/)>
 
+## Delete empty folders
+
+```PowerShell
+dir C:\NotBackedUp -Directory -Recurse |
+    where { -not $_.GetFiles("*","AllDirectories") } |
+    del -Recurse -WhatIf
+```
+
+**PowerShell Problem Solver: Delete Empty Folders with PowerShell**\
+From <[https://www.petri.com/powershell-problem-solver-delete-empty-folders](https://www.petri.com/powershell-problem-solver-delete-empty-folders)>
+
 
