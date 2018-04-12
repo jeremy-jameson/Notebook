@@ -637,4 +637,16 @@ dir C:\NotBackedUp -Directory -Recurse |
 **PowerShell Problem Solver: Delete Empty Folders with PowerShell**\
 From <[https://www.petri.com/powershell-problem-solver-delete-empty-folders](https://www.petri.com/powershell-problem-solver-delete-empty-folders)>
 
+## Copy cmder configuration
 
+```PowerShell
+$computerName = "EXT-FOOBAR9.extranet.technologytoolbox.com"
+
+$source = "C:\NotBackedUp\Public\Toolbox\cmder"
+```
+
+\$destination = "[\\\\\$computerName\\C`\$\\NotBackedUp\\Public\\Toolbox\\cmder](\\$computerName\C`$\NotBackedUp\Public\Toolbox\cmder)"
+
+```Console
+robocopy $source $destination /E /XD "git-for-windows"
+```
