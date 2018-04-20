@@ -68,8 +68,9 @@ cls
 ### # Copy network capture for analysis
 
 ```PowerShell
-$source = "\\EXT-SQL01A.extranet.technologytoolbox.com" `
-    + "\C$\NotBackedUp\Temp\Captures"
+$computerName = "EXT-SQL01A.extranet.technologytoolbox.com"
+
+$source = "\\$computerName\C$\NotBackedUp\Temp\Captures"
 
 $destination = "C:\NotBackedUp\Temp\Captures"
 
