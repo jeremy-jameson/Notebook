@@ -56,7 +56,8 @@ $computers = Get-ADComputer -Filter * |
         'TT-SQL01',
         'TT-SQL01-FC',
         'TT-VMM01',
-        'TT-VMM01-FC') } |
+        'TT-VMM01-FC',
+        'WOLVERINE') } |
     select -ExpandProperty Name
 
 $computers | ForEach-Object {
