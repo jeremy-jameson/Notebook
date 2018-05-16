@@ -14,13 +14,13 @@ netdom resetpwd /s:FAB-DC01 /ud:FABRIKAM\jjameson-admin /pd:*
 ### # EXTRANET domain
 
 ```PowerShell
-netdom resetpwd /s:EXT-DC04 /ud:EXTRANET\jjameson-admin /pd:*
+netdom resetpwd /s:EXT-DC08 /ud:EXTRANET\jjameson-admin /pd:*
 ```
 
 ### # TECHTOOLBOX domain
 
 ```PowerShell
-netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson-admin /pd:*
+netdom resetpwd /s:TT-DC06 /ud:TECHTOOLBOX\jjameson-admin /pd:*
 ```
 
 Pasted from <[http://www.technologytoolbox.com/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx](http://www.technologytoolbox.com/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx)>
@@ -67,7 +67,7 @@ cls
 $source = "\\tt-fs01.corp.technologytoolbox.com\Public\Toolbox"
 $destination = "C:\NotBackedUp\Public\Toolbox"
 
-robocopy $source $destination /E /MIR /XD "Microsoft SDKs"
+robocopy $source $destination /E /MIR /XD git-for-windows "Microsoft SDKs"
 ```
 
 ## # Clean up WinSxS folder
