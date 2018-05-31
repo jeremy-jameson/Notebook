@@ -35,7 +35,7 @@ cls
 $source = "\\TT-FS01.corp.technologytoolbox.com\Public\Toolbox"
 $dest = "C:\NotBackedUp\Public\Toolbox"
 
-robocopy $source $dest /E /MIR /XD "Microsoft SDKs"
+robocopy $source $dest /E /MIR /XD "git-for-windows" "Microsoft SDKs"
 ```
 
 ```PowerShell
@@ -49,8 +49,8 @@ $source = "\\TT-FS01.corp.technologytoolbox.com\Public\Toolbox"
 
 $computers = Get-ADComputer -Filter * |
     where { $_.Name -notin @(
-        'TT-HV02',
-        'TT-HV02-FC',
+        'TT-HV05',
+        'TT-HV05-FC',
         'TT-SOFS01',
         'TT-SOFS01-FC',
         'TT-SQL01',
@@ -65,7 +65,7 @@ $computers | ForEach-Object {
 
     $dest = '\\' + $_ + '\C$\NotBackedUp\Public\Toolbox'
 
-    robocopy $source $dest /E /MIR /XD "Microsoft SDKs" /R:1 /W:1
+    robocopy $source $dest /E /MIR /XD "git-for-windows" "Microsoft SDKs" /R:1 /W:1
 }
 ```
 
