@@ -22,7 +22,7 @@ net use \\TT-FS01.corp.technologytoolbox.com\IPC$ /USER:TECHTOOLBOX\jjameson
 $source = "\\TT-FS01.corp.technologytoolbox.com\Public\Toolbox"
 $dest = "C:\NotBackedUp\Public\Toolbox"
 
-robocopy $source $dest /E /XD "Microsoft SDKs"
+robocopy $source $dest /E /XD git-for-windows "Microsoft SDKs"
 ```
 
 ```PowerShell
@@ -35,7 +35,7 @@ cls
 $source = "\\TT-FS01.corp.technologytoolbox.com\Public\Toolbox"
 $dest = "C:\NotBackedUp\Public\Toolbox"
 
-robocopy $source $dest /E /MIR /XD "git-for-windows" "Microsoft SDKs"
+robocopy $source $dest /E /MIR /XD git-for-windows "Microsoft SDKs"
 ```
 
 ```PowerShell
@@ -65,7 +65,7 @@ $computers | ForEach-Object {
 
     $dest = '\\' + $_ + '\C$\NotBackedUp\Public\Toolbox'
 
-    robocopy $source $dest /E /MIR /XD "git-for-windows" "Microsoft SDKs" /R:1 /W:1
+    robocopy $source $dest /E /MIR /XD git-for-windows "Microsoft SDKs" /R:1 /W:1
 }
 ```
 
