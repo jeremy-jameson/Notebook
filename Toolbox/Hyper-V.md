@@ -297,16 +297,16 @@ cls
 #### # Increase size of VHD
 
 ```PowerShell
-$vmHost = "TT-HV02C"
+$vmHost = "TT-HV05C"
 $vmName = "TT-DPM02"
 
 Stop-VM -ComputerName $vmHost -Name $vmName
 
 Resize-VHD `
     -ComputerName $vmHost `
-    -Path ("D:\NotBackedUp\VMs\$vmName\Virtual Hard Disks\" `
+    -Path ("E:\NotBackedUp\VMs\$vmName\Virtual Hard Disks\" `
         + $vmName + ".vhdx") `
-    -SizeBytes 35GB
+    -SizeBytes 50GB
 
 Start-VM -ComputerName $vmHost -Name $vmName
 ```
@@ -321,8 +321,19 @@ cls
 #### # Extend partition
 
 ```PowerShell
-$size = (Get-PartitionSupportedSize –DiskNumber 0 –PartitionNumber 2)
-Resize-Partition -DiskNumber 0 –PartitionNumber 2 -Size $size.SizeMax
+$driveLetter = "C"
+
+$partition = Get-Partition -DriveLetter $driveLetter |
+    where { $_.DiskNumber -ne $null }
+
+$size = (Get-PartitionSupportedSize `
+    -DiskNumber $partition.DiskNumber `
+    -PartitionNumber $partition.PartitionNumber)
+
+Resize-Partition `
+    -DiskNumber $partition.DiskNumber `
+    -PartitionNumber $partition.PartitionNumber `
+    -Size $size.SizeMax
 ```
 
 ## Move virtual machines
