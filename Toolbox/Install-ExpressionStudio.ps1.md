@@ -21,12 +21,12 @@ cls
 ```PowerShell
 $isoFile = "en_expression_studio_4_ultimate_x86_dvd_537032.iso"
 
-$sourcePath = "\\TT-FS01\Products\Microsoft\Expression Studio"
+$source = "\\TT-FS01\Products\Microsoft\Expression Studio"
 
-$destPath = "\\EXT-FOOBAR4.extranet.technologytoolbox.com" `
+$destination = "\\EXT-FOOBAR4.extranet.technologytoolbox.com" `
     + "\C$\NotBackedUp\Temp"
 
-robocopy $sourcePath $destPath $isoFile
+robocopy $source $destination $isoFile
 ```
 
 ---
