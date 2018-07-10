@@ -604,22 +604,25 @@ Set-SCVirtualNetworkAdapter `
 ## Compare folders to ensure identical copies of files
 
 ```PowerShell
-cd C:\NotBackedUp\Securitas-CYCLOPS\EmployeePortal
+cd C:\NotBackedUp\Securitas-TT-TFS02\EmployeePortal
 
-$LeftFolder = "C:\NotBackedUp\Securitas-CYCLOPS\EmployeePortal\Main"
-$RightFolder = "C:\NotBackedUp\Securitas-CYCLOPS\EmployeePortal\Dev\Lab4"
+$leftFolderName = "Main"
+$rightFolderName = "Lab4"
 
-Get-ChildItem $LeftFolder -Recurse |
+$leftFolderPath = "C:\NotBackedUp\Securitas-TT-TFS02\EmployeePortal\$leftFolderName"
+$rightFolderPath = "C:\NotBackedUp\Securitas-TT-TFS02\EmployeePortal\Dev\$rightFolderName"
+
+Get-ChildItem $leftFolderPath -Recurse |
     Get-FileHash |
-    select @{Label="Path";Expression={$_.Path.Replace($LeftFolder,"")}},Hash |
-    Export-Csv -NoTypeInformation -Path Main.csv
+    select @{Label="Path";Expression={$_.Path.Replace($leftFolderPath,"")}},Hash |
+    Export-Csv -NoTypeInformation -Path "$leftFolderName.csv"
 
-Get-ChildItem $RightFolder -Recurse |
+Get-ChildItem $rightFolderPath -Recurse |
     Get-FileHash |
-    select @{Label="Path";Expression={$_.Path.Replace($RightFolder,"")}},Hash |
-    Export-Csv -NoTypeInformation -Path Lab4.csv
+    select @{Label="Path";Expression={$_.Path.Replace($rightFolderPath,"")}},Hash |
+    Export-Csv -NoTypeInformation -Path "$rightFolderName.csv"
 
-C:\NotBackedUp\Public\Toolbox\DiffMerge\x64\sgdm.exe Main.csv Lab4.csv
+C:\NotBackedUp\Public\Toolbox\DiffMerge\x64\sgdm.exe "$leftFolderName.csv" "$rightFolderName.csv"
 ```
 
 ### Reference
