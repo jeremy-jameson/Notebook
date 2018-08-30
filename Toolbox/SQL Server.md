@@ -88,39 +88,6 @@ SELECT
 
 **SQL Server Management Studio**
 
----
-
-
-## # Restart SQL Server
-
-```PowerShell
-Stop-Service SQLSERVERAGENT
-
-Restart-Service MSSQLSERVER
-
-Start-Service SQLSERVERAGENT
-```
-
-## # Add DNS host records for SQL Server cluster
-
-```PowerShell
-Add-DNSServerResourceRecordA `
-    -ZoneName extranet.technologytoolbox.com `
-    -Name EXT-SQL01 `
-    -IPv4Address 192.168.10.204
-
-Add-DNSServerResourceRecordA `
-    -ZoneName extranet.technologytoolbox.com `
-    -Name EXT-SQL01-A `
-    -IPv4Address 192.168.10.205
-```
-
-**SQL Server Maintenance Solution**\
-From <[https://ola.hallengren.com/](https://ola.hallengren.com/)>
-
----
-
-
 ## User permissions
 
 **SQL Server query to find all permissions/access for all users in a database**\
@@ -272,3 +239,33 @@ ORDER BY
     perm.[state_desc],
     obj.type_desc--perm.[class_desc]
 ```
+
+---
+
+
+## # Restart SQL Server
+
+```PowerShell
+Stop-Service SQLSERVERAGENT
+
+Restart-Service MSSQLSERVER
+
+Start-Service SQLSERVERAGENT
+```
+
+## # Add DNS host records for SQL Server cluster
+
+```PowerShell
+Add-DNSServerResourceRecordA `
+    -ZoneName extranet.technologytoolbox.com `
+    -Name EXT-SQL01 `
+    -IPv4Address 192.168.10.204
+
+Add-DNSServerResourceRecordA `
+    -ZoneName extranet.technologytoolbox.com `
+    -Name EXT-SQL01-A `
+    -IPv4Address 192.168.10.205
+```
+
+**SQL Server Maintenance Solution**\
+From <[https://ola.hallengren.com/](https://ola.hallengren.com/)>
