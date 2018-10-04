@@ -29,3 +29,10 @@ From <[https://developercommunity.visualstudio.com/solutions/79186/view.html](ht
 & "C:\Users\jjameson\Downloads\vs_Enterprise.exe" `
     --layout 'C:\vs2017\Enterprise' --includeOptional --lang en-US
 ```
+
+## Update (2018-10-04)
+
+```PowerShell
+& "C:\Users\jjameson\Downloads\vs_enterprise__1707846514.1538150767.exe" `
+    --layout 'C:\vs2017\Enterprise' --includeOptional --lang en-US
+```
