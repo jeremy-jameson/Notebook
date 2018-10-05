@@ -35,4 +35,6 @@ From <[https://developercommunity.visualstudio.com/solutions/79186/view.html](ht
 ```PowerShell
 & "C:\Users\jjameson\Downloads\vs_enterprise__1707846514.1538150767.exe" `
     --layout 'C:\vs2017\Enterprise' --includeOptional --lang en-US
+
+robocopy C:\vs2017\ '\\TT-FS01\Products\Microsoft\Visual Studio 2017' /E /MIR
 ```
