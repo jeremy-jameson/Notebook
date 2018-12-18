@@ -17,13 +17,14 @@ cls
 ### # Revert all VMs to most recent checkpoint
 
 ```PowerShell
-Get-VM | % {
-    Get-VMSnapshot -VM $_ |
-    Where-Object { $_.SnapshotType -eq "Standard" } |
-    Sort-Object CreationTime |
-    Select-Object -Last 1 |
-    Restore-VMSnapshot -Confirm:$false -Verbose
-}
+Get-VM |
+    ForEach-Object {
+        Get-VMSnapshot -VM $_ |
+        Where-Object { $_.SnapshotType -eq "Standard" } |
+        Sort-Object CreationTime |
+        Select-Object -Last 1 |
+        Restore-VMSnapshot -Confirm:$false -Verbose
+    }
 ```
 
 ---
