@@ -38,3 +38,12 @@ From <[https://developercommunity.visualstudio.com/solutions/79186/view.html](ht
 
 robocopy C:\vs2017\ '\\TT-FS01\Products\Microsoft\Visual Studio 2017' /E /MIR
 ```
+
+## Update (2018-12-224)
+
+```PowerShell
+& "C:\Users\jjameson\Downloads\vs_enterprise__740322565.1545343127.exe" `
+    --layout 'C:\vs2017\Enterprise' --includeOptional --lang en-US
+
+robocopy C:\vs2017\ '\\TT-FS01\Products\Microsoft\Visual Studio 2017' /E /MIR
+```
