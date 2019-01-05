@@ -3,6 +3,42 @@
 Tuesday, May 19, 2015
 11:07 AM
 
+## Start VMs
+
+```PowerShell
+@(
+    "FAB-DC03",
+    "FAB-DC04",
+    "FAB-DC01",
+    "FAB-WEB01",
+    "FAB-ADFS02",
+    "EXT-DC08",
+    "EXT-DC09",
+    "EXT-SQL03",
+    "EXT-APP03A",
+    "EXT-WEB03A",
+    "EXT-WEB03B",
+    "EXT-WAC02A",
+    "EXT-ADFS03A",
+    "EXT-ADFS03B",
+    "EXT-WAP03A",
+    "EXT-WAP03B",
+    "FOOBAR19",
+    "TT-WEB01-DEV",
+    "TT-WIN10-DEV1",
+    "CON-ADFS01",
+    "CON-WIN10-TEST1"
+) |
+    foreach {
+        Get-SCVirtualMachine -Name $_ |
+            where { $_.VirtualMachineState -ne 'Running' } |
+            Start-SCVirtualMachine |
+            select Name, MostRecentTask, MostRecentTaskUIState
+
+        Start-Sleep -Seconds 60
+    }
+```
+
 ## Manage VM checkpoints
 
 ---
