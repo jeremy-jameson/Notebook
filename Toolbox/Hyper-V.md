@@ -54,6 +54,37 @@ cls
 
 ```PowerShell
 Get-VM |
+ForEach-Object {
+    Get-VMSnapshot -VM $_ |
+    Where-Object { $_.SnapshotType -eq "Standard" } |
+    Sort-Object CreationTime |
+    Select-Object -Last 1 |
+    Restore-VMSnapshot -Confirm:$false -Verbose
+}
+```
+
+---
+
+
+---
+
+
+**FOOBAR18**
+
+```PowerShell
+cls
+```
+
+### # Revert all VMs to most recent checkpoint
+
+```PowerShell
+$vmHosts = "TT-HV05A", "TT-HV05B", "TT-HV05C"
+
+$vmHosts |
+ForEach-Object {
+    $vmHost = $_
+
+    Get-VM -ComputerName $vmHost |
     ForEach-Object {
         Get-VMSnapshot -VM $_ |
         Where-Object { $_.SnapshotType -eq "Standard" } |
@@ -61,6 +92,7 @@ Get-VM |
         Select-Object -Last 1 |
         Restore-VMSnapshot -Confirm:$false -Verbose
     }
+}
 ```
 
 ---
