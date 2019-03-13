@@ -54,13 +54,13 @@ cls
 
 ```PowerShell
 Get-VM |
-ForEach-Object {
-    Get-VMSnapshot -VM $_ |
-    Where-Object { $_.SnapshotType -eq "Standard" } |
-    Sort-Object CreationTime |
-    Select-Object -Last 1 |
-    Restore-VMSnapshot -Confirm:$false -Verbose
-}
+    ForEach-Object {
+        Get-VMSnapshot -VM $_ |
+        Where-Object { $_.SnapshotType -eq "Standard" } |
+        Sort-Object CreationTime |
+        Select-Object -Last 1 |
+        Restore-VMSnapshot -Confirm:$false -Verbose
+    }
 ```
 
 ---
