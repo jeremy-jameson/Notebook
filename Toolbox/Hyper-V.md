@@ -86,6 +86,7 @@ ForEach-Object {
 
     Get-VM -ComputerName $vmHost |
     ForEach-Object {
+        Write-Host "Checking for snapshots on VM ($($_.Name))..."
         Get-VMSnapshot -VM $_ |
         Where-Object { $_.SnapshotType -eq "Standard" } |
         Sort-Object CreationTime |
