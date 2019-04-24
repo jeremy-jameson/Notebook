@@ -3,6 +3,11 @@
 Monday, October 8, 2018
 1:43 PM
 
+> **Important**
+> 
+> My Cmder configuration is now documented on GitHub:\
+> [https://raw.githubusercontent.com/jeremy-jameson/Toolbox/master/Cmder/README.md](https://raw.githubusercontent.com/jeremy-jameson/Toolbox/master/Cmder/README.md)
+
 Settings
 
 - General
@@ -65,8 +70,34 @@ Settings
     - Set color 15: #ffffff ("White")
     - Save scheme as **Technology Toolbox Dark**
 
-```Console
+```PowerShell
 Notepad C:\NotBackedUp\Public\Toolbox\cmder\vendor\profile.ps1
 
 108:    Microsoft.PowerShell.Utility\Write-Host $pwd.ProviderPath -NoNewLine -ForegroundColor Green DarkGray
+
+
+$colors = [enum]::GetValues([System.ConsoleColor])
+Foreach ($bgcolor in $colors){
+    Foreach ($fgcolor in $colors) {
+        Write-Host "$fgcolor|"  -ForegroundColor $fgcolor -BackgroundColor $bgcolor -NoNewLine
+    }
+
+    Write-Host " on $bgcolor"
+}
 ```
+
+From <[https://stackoverflow.com/questions/20541456/list-of-all-colors-available-for-powershell](https://stackoverflow.com/questions/20541456/list-of-all-colors-available-for-powershell)>
+
+**Customize Windows Cmder Prompt**\
+From <[https://amreldib.com/blog/CustomizeWindowsCmderPrompt/](https://amreldib.com/blog/CustomizeWindowsCmderPrompt/)>
+
+**cmder-powershell-powerline-prompt**\
+From <[https://github.com/AmrEldib/cmder-powershell-powerline-prompt#cmder-powershell-powerline-prompt](https://github.com/AmrEldib/cmder-powershell-powerline-prompt#cmder-powershell-powerline-prompt)>
+
+**base16**\
+From <[http://chriskempson.com/projects/base16/](http://chriskempson.com/projects/base16/)>
+
+**Nord - An arctic, north-bluish color palette**\
+From <[https://github.com/arcticicestudio/nord](https://github.com/arcticicestudio/nord)>
+
+
