@@ -39,8 +39,23 @@ cls
 
 ```PowerShell
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+```
 
+> **Note**
+> 
+> PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. If prompted to install and import the NuGet provider, type **Y** and press **Enter** to continue.
+
+```PowerShell
 Install-Module -Name 'posh-git'
+
+PackageManagement\Install-Package : The following commands are already available on this system:'TabExpansion'. This module 'posh-git' may override the existing commands. If you still want to install this module 'posh-git', use -AllowClobber parameter.
+At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.0.0.1\PSModule.psm1:1809 char:21
++ ...          $null = PackageManagement\Install-Package @PSBoundParameters
++                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (Microsoft.Power....InstallPackage:InstallPackage) [Install-Package], Exception
+    + FullyQualifiedErrorId : CommandAlreadyAvailable,Validate-ModuleCommandAlreadyAvailable,Microsoft.PowerShell.PackageManagement.Cmdlets.InstallPackage
+
+Install-Module -Name 'posh-git' -AllowClobber
 ```
 
 ```PowerShell
