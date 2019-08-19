@@ -26,4 +26,49 @@ GO\
 CREATE NONCLUSTERED INDEX [IX_tbLocalizedPropertyForRevision] ON [dbo].[tbLocalizedPropertyForRevision]([LocalizedPropertyID])\
 GO
 
+## Decline superseded updates
 
+```PowerShell
+# Option 1
+# ------------------------------------------------------------------------------
+
+$stopwatch = C:\NotBackedUp\Public\Toolbox\PowerShell\Get-Stopwatch.ps1
+
+$supersededUpdates = Get-WsusUpdate -Approval AnyExceptDeclined -Classification All -Status Any |
+    Where-Object -Property UpdatesSupersedingThisUpdate -NE -Value 'None'
+
+C:\NotBackedUp\Public\Toolbox\PowerShell\Write-ElapsedTime.ps1 -Stopwatch $stopwatch -Prefix "Option 1 - "
+
+Write-Host ("Option 1 count: " + $supersededUpdates.Count)
+
+# Option 2
+# ------------------------------------------------------------------------------
+
+$stopwatch = C:\NotBackedUp\Public\Toolbox\PowerShell\Get-Stopwatch.ps1
+
+$supersededUpdates = Get-WSUSUpdate -Approval AnyExceptDeclined -Classification All -Status Any `
+    | Where-Object { $_.Update.GetRelatedUpdates(([Microsoft.UpdateServices.Administration.UpdateRelationship]::UpdatesThatSupersedeThisUpdate)).Count -gt 0 } `
+
+C:\NotBackedUp\Public\Toolbox\PowerShell\Write-ElapsedTime.ps1 -Stopwatch $stopwatch -Prefix "Option 2 - "
+
+Write-Host ("Option 2 count: " + $supersededUpdates.Count)
+
+# Option 3
+# ------------------------------------------------------------------------------
+
+$stopwatch = C:\NotBackedUp\Public\Toolbox\PowerShell\Get-Stopwatch.ps1
+
+$supersededUpdates = Get-WsusUpdate -Approval Approved -Status InstalledOrNotApplicableOrNoStatus |
+    ? {$_.Update.IsSuperseded -eq $true -and $_.ComputersNeedingThisUpdate -eq 0}
+
+C:\NotBackedUp\Public\Toolbox\PowerShell\Write-ElapsedTime.ps1 -Stopwatch $stopwatch -Prefix "Option 3 - "
+
+Write-Host ("Option 3 count: " + $supersededUpdates.Count)
+
+Option 1 - Elapsed time: 00:23:56.098
+Option 1 count: 186
+Option 2 - Elapsed time: 00:25:05.847
+Option 2 count: 186
+Option 3 - Elapsed time: 00:06:19.584
+Option 3 count: 146
+```
