@@ -71,4 +71,21 @@ Option 2 - Elapsed time: 00:25:05.847
 Option 2 count: 186
 Option 3 - Elapsed time: 00:06:19.584
 Option 3 count: 146
+
+# Option 4
+# ------------------------------------------------------------------------------
+
+$stopwatch = C:\NotBackedUp\Public\Toolbox\PowerShell\Get-Stopwatch.ps1
+
+$supersededUpdates =
+Get-WsusUpdate -Approval Approved -Status InstalledOrNotApplicableOrNoStatus |
+    Where-Object -Property UpdatesSupersedingThisUpdate -NE -Value 'None' |
+    Where-Object -Property ComputersNeedingThisUpdate -EQ 0
+
+C:\NotBackedUp\Public\Toolbox\PowerShell\Write-ElapsedTime.ps1 -Stopwatch $stopwatch -Prefix "Option 4 - "
+
+Write-Host ("Option 4 count: " + $supersededUpdates.Count)
+
+Option 4 - Elapsed time: 00:06:10.966
+Option 4 count: 146
 ```
