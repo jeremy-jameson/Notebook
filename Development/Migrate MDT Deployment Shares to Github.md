@@ -3,25 +3,26 @@
 Saturday, June 1, 2019
 4:01 PM
 
+## Compare folders to ensure identical copies of files
+
 ```PowerShell
-cls
-$utcOffsetHours = [TimeZoneInfo]::Local |
-    select -ExpandProperty BaseUtcOffset |
-    select -ExpandProperty Hours
+cd C:\NotBackedUp\GitHub\technology-toolbox
 
-$timezoneOffset = $utcOffsetHours.ToString("00") + "00"
+$leftFolderName = 'MDT'
+$rightFolderName = 'MDT-Deploy'
 
-$commitDate = (Get-Date).Subtract([TimeSpan]::FromDays((365*4 + 154.2)))
+$leftFolderPath = "C:\NotBackedUp\GitHub\technology-toolbox\$leftFolderName"
+$rightFolderPath = "C:\NotBackedUp\GitHub\technology-toolbox\$rightFolderName"
 
-$commitDateInRfc2822Format = `
-    $commitDate.ToString("R").Replace("GMT", $timezoneOffset)
+Get-ChildItem $leftFolderPath -Recurse |
+    Get-FileHash |
+    select @{Label="Path";Expression={$_.Path.Replace($leftFolderPath,"")}},Hash |
+    Export-Csv -NoTypeInformation -Path "$leftFolderName.csv"
 
-$env:GIT_AUTHOR_DATE = "$commitDateInRfc2822Format"
-$env:GIT_COMMITTER_DATE = "$commitDateInRfc2822Format"
+Get-ChildItem $rightFolderPath -Recurse |
+    Get-FileHash |
+    select @{Label="Path";Expression={$_.Path.Replace($rightFolderPath,"")}},Hash |
+    Export-Csv -NoTypeInformation -Path "$rightFolderName.csv"
 
-$env:GIT_AUTHOR_DATE
-
-git status
-
-#git commit -m ""
+C:\NotBackedUp\Public\Toolbox\DiffMerge\x64\sgdm.exe "$leftFolderName.csv" "$rightFolderName.csv"
 ```
