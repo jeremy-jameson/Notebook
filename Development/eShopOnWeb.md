@@ -5,59 +5,143 @@ Thursday, October 3, 2019
 
 ```PowerShell
 cls
-# Install Azure CLI
+```
 
-Push-Location C:\NotBackedUp\Temp
+## # Install Azure PowerShell module
 
-Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi
-
-Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'
-
-Pop-Location
-
-# Configure service connection in Azure DevOps
-
-az login
-
-Note: Login as jjameson-admin@technologytoolbox.com
+```PowerShell
+Install-Module -Name Az -AllowClobber -Scope AllUsers
 ```
 
 ```PowerShell
 cls
-# Select subscription
+```
 
-az account set --subscription "Visual Studio Ultimate with MSDN"
+## # Configure service connection in Azure DevOps
 
-# Create resource groups
+```PowerShell
+Connect-AzAccount
+```
 
-az group create --location eastus --name eShopOnWeb-001-dev
-az group create --location eastus --name eShopOnWeb-001-test
-az group create --location eastus --name eShopOnWeb-001
+> **Note**
+> 
+> Login as **jjameson-admin@technologytoolbox.com**
+
+```PowerShell
+cls
+```
+
+## # Select subscription
+
+```PowerShell
+Select-AzSubscription -Subscription "Visual Studio Ultimate with MSDN"
 ```
 
 ```PowerShell
 cls
-
-$subscriptionId = "********-fdf5-4fd0-b21b-{redacted}"
-
-az ad sp create-for-rbac --name "http://sp-eShopOnWeb-001-deployment" `
-    --role contributor `
-    --scopes /subscriptions/$subscriptionId/resourceGroups/eShopOnWeb-001-dev `
-        /subscriptions/$subscriptionId/resourceGroups/eShopOnWeb-001-test `
-        /subscriptions/$subscriptionId/resourceGroups/eShopOnWeb-001
-
-{
-  "appId": "da48546d-9435-430f-b225-{redacted}",
-  "displayName": "sp-eShopOnWeb-001-deployment",
-  "name": "http://sp-eShopOnWeb-001-deployment",
-  "password": "5a5939ed-d287-4877-8496-{redacted}",
-  "tenant": "********-b76f-400c-ba19-{redacted}"
-}
 ```
 
-![(screenshot)](https://assets.technologytoolbox.com/screenshots/0E/1F5E1B64BE23C62F0E6542BC7BD4FBEBE749730E.png)
+## # Create resource groups
 
-![(screenshot)](https://assets.technologytoolbox.com/screenshots/B6/D5F9551B1162FDB986EE2BDF3AF2BB87125D56B6.png)
+```PowerShell
+New-AzResourceGroup -Location 'East US' -Name eShopOnWeb-001-dev
+New-AzResourceGroup -Location 'East US' -Name eShopOnWeb-001-test
+New-AzResourceGroup -Location 'East US' -Name eShopOnWeb-001
+```
+
+```PowerShell
+cls
+```
+
+## # Create Service Principal for deploying through Azure DevOps release pipeline
+
+### # Create Service Principal and save result for retrieving password
+
+```PowerShell
+$servicePrincipal = New-AzADServicePrincipal `
+    -DisplayName techtoolbox-eShopOnWeb-deployment
+```
+
+### # Store password for Service Principal
+
+```PowerShell
+$bstr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR(
+    $servicePrincipal.Secret)
+
+$unsecureSecret = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($bstr)
+
+$unsecureSecret
+
+{redacted}
+```
+
+### Record Service Principal password in secure location
+
+```PowerShell
+cls
+```
+
+## # Assign permissions to resource groups
+
+```PowerShell
+New-AzRoleAssignment `
+    -ApplicationId $servicePrincipal.ApplicationId `
+    -ResourceGroupName eShopOnWeb-001-dev `
+    -RoleDefinitionName Contributor
+
+New-AzRoleAssignment `
+    -ApplicationId $servicePrincipal.ApplicationId `
+    -ResourceGroupName eShopOnWeb-001-test `
+    -RoleDefinitionName Contributor
+
+New-AzRoleAssignment `
+    -ApplicationId $servicePrincipal.ApplicationId `
+    -ResourceGroupName eShopOnWeb-001 `
+    -RoleDefinitionName Contributor
+```
+
+## Add service connection for Azure Resource Manager to Azure DevOps project
+
+![(screenshot)](https://assets.technologytoolbox.com/screenshots/05/B52BFC1D22BF99191390D847FED2BA8F6A829F05.png)
+
+```PowerShell
+cls
+```
+
+## # Rebuild DEV
+
+### # Delete resource group
+
+```PowerShell
+Remove-AzResourceGroup -Name eShopOnWeb-001-dev -Force
+```
+
+```PowerShell
+cls
+```
+
+### # Create resource group
+
+```PowerShell
+New-AzResourceGroup -Location 'East US' -Name eShopOnWeb-01-dev
+```
+
+```PowerShell
+cls
+```
+
+### # Assign permissions to resource group
+
+```PowerShell
+$servicePrincipal = Get-AzADServicePrincipal -DisplayName techtoolbox-eShopOnWeb-deployment
+
+New-AzRoleAssignment `
+    -ApplicationId $servicePrincipal.ApplicationId `
+    -ResourceGroupName eShopOnWeb-001-dev `
+    -RoleDefinitionName Contributor
+```
+
+## Create release pipeline
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/A0/E124BC1DFEF0011709F2033893310780DDBDECA0.png)
 
