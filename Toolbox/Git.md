@@ -70,138 +70,189 @@ mkdir src\Repos
 cd src\Repos
 
 git clone https://techtoolbox.visualstudio.com/DefaultCollection/_git/Training
+```
 
+### # Show differences
 
-# Show differences
-
+```PowerShell
 git diff
+```
 
-# Unstage files
+### # Unstage files
 
+```PowerShell
 git status
 
 git reset HEAD <file>
+```
 
-# Discard changes
+### # Discard changes
 
+```PowerShell
 git checkout -- <file>
+```
 
-# Undo a commit
+### # Undo a commit
 
+```PowerShell
 git reset --soft HEAD^
+```
 
 (move to commit before HEAD)
 
-# Add to a commit
+### # Add to a commit
 
+```PowerShell
 git add <file>
 
 git commit --amend -m <message>
+```
 
-# Undo last commit and all changes
+### # Undo last commit and all changes
 
+```PowerShell
 git reset --hard HEAD^
+```
 
-# Undo last two commits and all changes
+### # Undo last two commits and all changes
 
+```PowerShell
 git reset --hard HEAD^^
+```
 
-# Adding a remote
+### # Adding a remote
 
+```PowerShell
 git remote add <name> <address>
 
 git remote add origin https://techtoolbox.visualstudio.com/DefaultCollection/_git/Training
+```
 
 Note that "origin" is the name for the remote (by convention "origin" is typically used)
 
-# View remotes
+### # View remotes
 
+```PowerShell
 git remote -v
+```
 
-# Push to remote
+### # Push to remote
 
+```PowerShell
 git push -u origin master
+```
 
-Password caching - https://help.github.com/articles/set-up-git
+### # Pull from remote
 
-# Pull from remote
-
+```PowerShell
 git pull
+```
 
-# Create branch
+### # Create branch
 
+```PowerShell
 git branch <name>
+```
 
-# Switch to branch
+### # Switch to branch
 
+```PowerShell
 git checkout <branch>
+```
 
-# Merge branch
+### # Merge branch
 
+```PowerShell
 git checkout master
 
 git merge <branch>
+```
 
-# Create and switch to branch (single step)
+### # Create and switch to branch (single step)
 
+```PowerShell
 git checkout -b <branch>
+```
 
-# Create a remote branch
+### # Create a remote branch
 
+```PowerShell
 git checkout -b <name>
 
 git push origin <branch name>
+```
 
-# List remote branches
+### # List remote branches
 
+```PowerShell
 git branch -r
+```
 
-# Pull remote branch
+### # Pull remote branch
 
+```PowerShell
 git checkout <branch name>
+```
 
-# Show remote branches with tracking info
+### # Show remote branches with tracking info
 
+```PowerShell
 git remote show origin
+```
 
-# Remove a branch
+### # Remove a branch
 
-# Remove remote branch
+#### # Remove remote branch
 
+```PowerShell
 git push origin :<branch name>
+```
 
 This only deletes the remote branch (not the local branch)
 
-# Delete local branch
+#### # Delete local branch
 
+```PowerShell
 git branch -d <branch name>
+```
 
 If there are commits that have not been merged, an error occurs. If you are sure you want to delete it:
 
+```Console
 git branch -D <branch name>
+```
 
-# Clean up local branches when remote branches have been deleted
+#### # Clean up local branches when remote branches have been deleted
 
+```PowerShell
 git remote show origin
 
 git remote prune origin
+```
 
-# Tagging
+### # Tagging
 
-# List all tags
+#### # List all tags
 
+```PowerShell
 git tag
+```
 
-# Add a tag
+#### # Add a tag
 
+```PowerShell
 git tag -a <tag name> -m <message>
+```
 
-# Push new tags
+#### # Push new tags
 
+```PowerShell
 git push --tags
+```
 
-# Show differences
+### # Show differences
 
+```PowerShell
 git diff HEAD          # latest commit
 
 git diff HEAD^         # parent of latest commit
@@ -211,20 +262,26 @@ git diff HEAD^^        # grandparent of latest commit
 git diff HEAD~5        # 5 commits ago
 
 git diff HEAD^..HEAD   # second most recent commit vs. most recent
+```
 
-# Show history of each line in a file
+### # Show history of each line in a file
 
+```PowerShell
 git blame <file> --date short
+```
 
-# Exclude files and folder
+### # Exclude files and folders
 
+```PowerShell
 Notepad .gitignore
 
 <file>
 <folder>/
+```
 
-# Untrack files
+### # Untrack files
 
+```PowerShell
 git rm --cached <file>
 ```
 
@@ -236,4 +293,6 @@ From <[http://nvie.com/posts/a-successful-git-branching-model/](http://nvie.com/
 **Gitflow Workflow**\
 From <[https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)>
 
+### Password caching
 
+[https://help.github.com/articles/set-up-git](https://help.github.com/articles/set-up-git)
