@@ -91,3 +91,20 @@ C:\NotBackedUp\Public\Toolbox\PowerShell\Add-InternetSecurityZoneMapping.ps1 `
     -Zone TrustedSites `
     -Patterns $trustedSites
 ```
+
+```PowerShell
+cls
+```
+
+## # Configure trusted sites for Visual Studio 2017
+
+```PowerShell
+$trustedSites = @(
+    "https://aadcdn.msauth.net",
+    "https://aadcdn.msftauth.net",
+    "https://login.microsoftonline.com")
+
+C:\NotBackedUp\Public\Toolbox\PowerShell\Add-InternetSecurityZoneMapping.ps1 `
+    -Zone TrustedSites `
+    -Patterns $trustedSites
+```
