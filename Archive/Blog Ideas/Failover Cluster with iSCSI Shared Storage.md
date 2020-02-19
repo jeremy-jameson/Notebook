@@ -28,7 +28,7 @@ net use \\ICEMAN\IPC$ /USER:TECHTOOLBOX\jjameson
 ```
 
 > **Note**
-> 
+>
 > When prompted, type the password to connect to the server.
 
 ```PowerShell
@@ -49,7 +49,7 @@ C:\NotBackedUp\Temp\windows10.0-kb3213522-x64_fc88893ff1fbe75cac5f5aae7ff1becee5
 ```
 
 > **Important**
-> 
+>
 > Ensure the checksum matches the expected value (specified in the filename).
 
 ##### # Install patch
@@ -59,7 +59,7 @@ C:\NotBackedUp\Temp\windows10.0-kb3213522-x64_fc88893ff1fbe75cac5f5aae7ff1becee5
 ```
 
 > **Note**
-> 
+>
 > When prompted, restart the computer to complete the installation.
 
 ```Console
@@ -90,11 +90,10 @@ sconfig
 ```
 
 > **Note**
-> 
+>
 > Rename the computer to **TT-HV02B** and join the **corp.technologytoolbox.com** domain.
 
 ---
-
 
 **FOOBAR8**
 
@@ -130,7 +129,6 @@ Invoke-Command -ComputerName $computerName -ScriptBlock $scriptBlock
 ```
 
 ---
-
 
 ### Login as fabric administrator account
 
@@ -246,7 +244,7 @@ Get-NetLbfoTeam -Name $interfaceAlias
 ```
 
 > **Important**
-> 
+>
 > Ensure the **Status** property of the network team is **Up**.
 
 ```PowerShell
@@ -369,19 +367,17 @@ Set-DnsClientServerAddress `
 
 #### Physical disks
 
-| Disk | Model                     | Serial Number   | Capacity | Drive Letter | Volume Size | Allocation Unit Size | Volume Label |
-| ---- | ------------------------- | --------------- | -------- | ------------ | ----------- | -------------------- | ------------ |
-| 0    | WDC WD4002FYYZ-01B7CB0    | *****03Y        | 4 TB     |              |             |                      |              |
-| 1    | ST1000NM0033-9ZM173       | *****EMV        | 1 TB     |              |             |                      |              |
-| 2    | ST1000NM0033-9ZM173       | *****4YL        | 1 TB     |              |             |                      |              |
-| 3    | Samsung SSD 850 PRO 128GB | *********03705D | 128 GB   | C:           | 119 GB      | 4K                   |              |
-| 4    | Samsung SSD 850 PRO 512GB | *********10883Y | 512 GB   |              |             |                      |              |
-| 5    | Samsung SSD 850 PRO 512GB | *********10872K | 512 GB   |              |             |                      |              |
-| 6    | Samsung SSD 840 Series    | *********01728J | 512 GB   |              |             |                      |              |
-| 7    | Samsung SSD 840 Series    | *********45678J | 512 GB   |              |             |                      |              |
-| 8    | WDC WD4002FYYZ-01B7CB0    | *****0RY        | 4 TB     |              |             |                      |              |
-
-
+| Disk | Model                     | Serial Number            | Capacity | Drive Letter | Volume Size | Allocation Unit Size | Volume Label |
+| ---- | ------------------------- | ------------------------ | -------- | ------------ | ----------- | -------------------- | ------------ |
+| 0    | WDC WD4002FYYZ-01B7CB0    | \*\*\*\*\*03Y            | 4 TB     |              |             |                      |              |
+| 1    | ST1000NM0033-9ZM173       | \*\*\*\*\*EMV            | 1 TB     |              |             |                      |              |
+| 2    | ST1000NM0033-9ZM173       | \*\*\*\*\*4YL            | 1 TB     |              |             |                      |              |
+| 3    | Samsung SSD 850 PRO 128GB | \*\*\*\*\*\*\*\*\*03705D | 128 GB   | C:           | 119 GB      | 4K                   |              |
+| 4    | Samsung SSD 850 PRO 512GB | \*\*\*\*\*\*\*\*\*10883Y | 512 GB   |              |             |                      |              |
+| 5    | Samsung SSD 850 PRO 512GB | \*\*\*\*\*\*\*\*\*10872K | 512 GB   |              |             |                      |              |
+| 6    | Samsung SSD 840 Series    | \*\*\*\*\*\*\*\*\*01728J | 512 GB   |              |             |                      |              |
+| 7    | Samsung SSD 840 Series    | \*\*\*\*\*\*\*\*\*45678J | 512 GB   |              |             |                      |              |
+| 8    | WDC WD4002FYYZ-01B7CB0    | \*\*\*\*\*0RY            | 4 TB     |              |             |                      |              |
 
 ```PowerShell
 Get-PhysicalDisk | sort DeviceId
@@ -421,16 +417,14 @@ PhysicalDisk8</p>
 | Data02 | Mirror | Fixed        | 900 GB   | 200 GB   | 1200 GB  | E:     | Data02       | 5 GB             |
 | Data03 | Mirror | Fixed        | 600 GB   |          | 600 GB   | F:     | Data03       | 5 GB             |
 
-
-
 #### Update AHCI drivers
 
 1. Download the latest AHCI drivers from the Intel website:\
    **Intel® RSTe AHCI & SCU Software RAID driver for Windows**\
    From <[https://downloadcenter.intel.com/download/25393/Intel-RSTe-AHCI-SCU-Software-RAID-driver-for-Windows-](https://downloadcenter.intel.com/download/25393/Intel-RSTe-AHCI-SCU-Software-RAID-driver-for-Windows-)>
 2. Extract the drivers (**[\\\\ICEMAN\\Public\\Download\\Drivers\\Intel\\RSTe](\\ICEMAN\Public\Download\Drivers\Intel\RSTe) AHCI & SCU Software RAID driver for Windows**) and copy the files to a temporary location on the server:
-3. Install the drivers for the **Intel(R) C600+/C220+ series chipset SATA AHCI Controller (PCI\\VEN_8086&DEV_8D02&…)**:
-4. Install the drivers for the **Intel(R) C600+/C220+ series chipset sSATA AHCI Controller (PCI\\VEN_8086&DEV_8D62&…)**:
+3. Install the drivers for the **Intel(R) C600+/C220+ series chipset SATA AHCI Controller (PCI\\VEN_8086&DEV_8D02&...)**:
+4. Install the drivers for the **Intel(R) C600+/C220+ series chipset sSATA AHCI Controller (PCI\\VEN_8086&DEV_8D62&...)**:
 5. Restart the server.
 
 ```Console
@@ -486,7 +480,7 @@ Get-StoragePool "Pool 1" |
 ```
 
 > **Important**
-> 
+>
 > Ensure the **MediaType** property for the SSDs is set to **SSD**.
 
 ```PowerShell
@@ -497,10 +491,10 @@ cls
 
 ```PowerShell
 Get-StoragePool "Pool 1" |
-    New-StorageTier –FriendlyName "SSD Tier" –MediaType SSD
+    New-StorageTier -FriendlyName "SSD Tier" -MediaType SSD
 
 Get-StoragePool "Pool 1" |
-    New-StorageTier –FriendlyName "HDD Tier" –MediaType HDD
+    New-StorageTier -FriendlyName "HDD Tier" -MediaType HDD
 ```
 
 #### # Create storage spaces
@@ -512,7 +506,7 @@ Get-StoragePool "Pool 1" |
     New-VirtualDisk `
         -FriendlyName "Data01" `
         -ResiliencySettingName Mirror `
-        –StorageTiers $ssdTier `
+        -StorageTiers $ssdTier `
         -StorageTierSizes 200GB
 
 $hddTier = Get-StorageTier -FriendlyName "HDD Tier"
@@ -521,7 +515,7 @@ Get-StoragePool "Pool 1" |
     New-VirtualDisk `
         -FriendlyName "Data02" `
         -ResiliencySettingName Mirror `
-        –StorageTiers $ssdTier,$hddTier `
+        -StorageTiers $ssdTier,$hddTier `
         -StorageTierSizes 200GB,1200GB `
         -WriteCacheSize 5GB
 
@@ -529,7 +523,7 @@ Get-StoragePool "Pool 1" |
     New-VirtualDisk `
         -FriendlyName "Data03" `
         -ResiliencySettingName Mirror `
-        –StorageTiers $hddTier `
+        -StorageTiers $hddTier `
         -StorageTierSizes 600GB `
         -WriteCacheSize 5GB
 ```
@@ -625,7 +619,7 @@ Set-ScheduledTask $task
 ```
 
 > **Important**
-> 
+>
 > Simply appending ">> {log file}" (as described in the "To change the Storage Tiers Optimization task to save a report (Task Scheduler)" section of the [TechNet article](TechNet article)) did not work. Specifically, when running the task, the log file was not created and the task immediately finished without reporting any error.\
 > Changing the **Program/script** (i.e. the action's **Execute** property) to launch "%windir%\\system32\\defrag.exe" using "%windir%\\system32\\cmd.exe" resolved the issue.
 
@@ -794,7 +788,7 @@ sconfig
 ```
 
 > **Important**
-> 
+>
 > Restart the server to complete the patching.
 
 #### Login as fabric administrator account

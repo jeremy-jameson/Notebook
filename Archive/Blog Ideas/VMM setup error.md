@@ -7,7 +7,6 @@ Thursday, January 12, 2017
 
 ---
 
-
 **FOOBAR8 - Run as TECHTOOLBOX\\jjameson-admin**
 
 ```PowerShell
@@ -48,7 +47,7 @@ $accessRule = New-Object System.DirectoryServices.ActiveDirectoryAccessRule(
 
 $securityDescriptor.AddAccessRule($accessRule)
 
-Set-ADObject $computerObject –Replace @{ nTSecurityDescriptor = $securityDescriptor }
+Set-ADObject $computerObject -Replace @{ nTSecurityDescriptor = $securityDescriptor }
 
 Start-Sleep -Seconds 15
 ```
@@ -87,11 +86,10 @@ $accessRule = New-Object System.DirectoryServices.ActiveDirectoryAccessRule(
 
 $securityDescriptor.AddAccessRule($accessRule)
 
-Set-ADObject $computerObject –Replace @{ nTSecurityDescriptor = $securityDescriptor }
+Set-ADObject $computerObject -Replace @{ nTSecurityDescriptor = $securityDescriptor }
 ```
 
 ---
-
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/E2/B146BB04A55B61D96BE121AC1793F086D47B00E2.png)
 
@@ -99,7 +97,6 @@ Creation of the VMM resource group TT-VMM01 failed.\
 Ensure that the group name is valid, and cluster resource or group with the same name does not exist, and the group name is not used in the network.
 
 ---
-
 
 **C:\\ProgramData\\VMMLogs\\SetupWizard.log**
 
@@ -116,6 +113,3 @@ Ensure that the group name is valid, and cluster resource or group with the same
 ```
 
 ---
-
-
-

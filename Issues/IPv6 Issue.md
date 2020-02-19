@@ -82,4 +82,4 @@ Ethernet adapter LAN 2 - 192.168.10.x:
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/8C/BA2AA3469EF11569DDDC045C7DB156219306C28C.png)
 
-PowerShell prompt still very slow when starting. Using Process Monitor and Message Analyzer, I discovered this was due to WPAD queries.
+PowerShell prompt still very slow when starting. Using Process Monitor and Message Analyzer, I discovered this was due to WPAD queries.

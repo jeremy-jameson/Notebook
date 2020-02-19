@@ -14,5 +14,3 @@ Monday, March 31, 2014
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/87/54B90B081B462536BE60D48FA3F03BB5F4613787.png)
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/CC/CE661AEB0F80035CA7A5DE9FDE3C0E7CC34064CC.png)
-
-

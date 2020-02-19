@@ -21,9 +21,9 @@ cls
 ## Export failed timer jobs to CSV (initial attempt -- fails to return all failed jobs)
 
 > **Note**
-> 
+>
 > In the following script, **\$failedFarmJobs** does not include the following failed jobs reported in Central Administration:
-> 
+>
 > - **eDiscovery In-Place Hold Processing**
 > - **User Profile Service Application - User Profile Incremental Synchronization**
 > - **Health Statistics Updating**

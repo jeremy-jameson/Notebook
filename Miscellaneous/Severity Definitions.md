@@ -10,7 +10,3 @@ Below is the severity list we came up with after working with the QA teams last 
 | Sev 2 | Customers are frustrated using the feature, the product appears poorly engineered or the feature is obviously inconsistent with other elements of product, suite UI. Hard to use. |
 | Sev 3 | Customers annoyed by / aware of UI inconsistencies, the UI appears sloppy with poor fit and finish.                                                                               |
 | Sev 4 | Little or no user impact.                                                                                                                                                         |
-
-
-
-

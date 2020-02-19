@@ -25,13 +25,14 @@ Pasted from <[http://it.ep-0.com/?p=18](http://it.ep-0.com/?p=18)>
 
 "The parameter is incorrect" when trying to WriteEvent using event source of "Dow R&D"
 
-Activating feature (Dow.ElectronicLabNotebook.Web_Lists) on site ([http://rndsharepoint-local/sites/elnhd](http://rndsharepoint-local/sites/elnhd))...\
-Enable-SPFeature : The parameter is incorrect\
-At C:\\NotBackedUp\\Dow\\Main\\Source\\DeploymentFiles\\Scripts\\Activate Features.ps1:92 char:21\
-+     Enable-SPFeature <<<<  \$featureName -Url \$siteUrl `\
-    + CategoryInfo          : InvalidData: (Microsoft.Share...etEnableFeature:SPCmdletEnableFeature) [Enable-SPFeature\
-   ], Win32Exception\
+```Text
+Activating feature (Dow.ElectronicLabNotebook.Web_Lists) on site ([http://rndsharepoint-local/sites/elnhd](http://rndsharepoint-local/sites/elnhd))...
+Enable-SPFeature : The parameter is incorrect
+At C:\\NotBackedUp\\Dow\\Main\\Source\\DeploymentFiles\\Scripts\\Activate Features.ps1:92 char:21
++     Enable-SPFeature <<<<  \$featureName -Url \$siteUrl `
+    + CategoryInfo          : InvalidData: (Microsoft.Share...etEnableFeature:SPCmdletEnableFeature) [Enable-SPFeature], Win32Exception
     + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletEnableFeature
+```
 
 **SQL Server Integration Services**
 

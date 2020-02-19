@@ -53,5 +53,3 @@ E-Mail Notifications
   - Sender Information
     - Sender name: **svc-wsus@technologytoolbox.com**
     - E-mail address: **svc-wsus@technologytoolbox.com**
-
-

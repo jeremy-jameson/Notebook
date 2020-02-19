@@ -42,7 +42,7 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 ```
 
 > **Note**
-> 
+>
 > PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. If prompted to install and import the NuGet provider, type **Y** and press **Enter** to continue.
 
 ```PowerShell

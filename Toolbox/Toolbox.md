@@ -366,7 +366,7 @@ Get-ADObject -Filter 'isDeleted -eq $true -and Name -like "*DEL:*"' -IncludeDele
 
 ### Reference
 
-**How to Empty the Active Directory Recycling Bin**\
+**How to Empty the Active Directory Recycling Bin**\
 From <[https://bdwyertech.net/2013/01/22/how-to-empty-the-active-directory-recycling-bin/](https://bdwyertech.net/2013/01/22/how-to-empty-the-active-directory-recycling-bin/)>
 
 ```PowerShell

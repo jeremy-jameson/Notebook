@@ -18,5 +18,3 @@ Install SQL Server 2012 SP1
 - Shared Features
   - Management Tools - Basic
     - Management Tools - Complete
-
-

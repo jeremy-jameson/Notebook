@@ -85,7 +85,6 @@ Dismount-DiskImage -ImagePath $imagePath
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -106,12 +105,11 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ## Create task sequences for building baseline images
 
 ### Create task sequence - "Windows 8.1 Enterprise x64 - Baseline"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**,** **right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
 2. Expand the **Task Sequences** node, right-click the **Windows 8.1** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -133,7 +131,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Create task sequence - "Windows Server 2012 R2 Standard - Baseline"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**,** **right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
 2. Expand the **Task Sequences** node, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -153,18 +151,17 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
      - Internet Explorer Home Page: **about:blank**
    - Admin Password
      - **Use the specified local Administrator password.**
-     - Administrator Password:** **{password}****
+     - Administrator Password: **{password}**
 
 > **Important**
-> 
+>
 > The MSDN version of Windows Server 2012 R2 will prompt to enter a product key (but provide an option to skip this step). It does not honor the SkipProductKey=YES entry in the MDT CustomSettings.ini file.
 
 > **Important**
-> 
+>
 > Windows Server 2012 R2 with Update requires a password to be specified for the Administrator account (unlike Windows 8.1). If an Administrator password is not specified in the task sequence, the Lite Touch Installation will prompt for a password (which must be subsequently be entered manually when completing the actions specified in the task sequence).
 
 ---
-
 
 **WOLVERINE**
 
@@ -191,7 +188,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 #### Check-in files
 
 ---
-
 
 ## Configure MDT build lab deployment share
 
@@ -260,7 +256,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -281,7 +276,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ### Update the deployment share (create Windows PE boot images)
 
 After the deployment share has been configured, it needs to be updated. This is the process when the Windows PE boot images are created.
@@ -294,8 +288,6 @@ After the deployment share has been configured, it needs to be updated. This is 
 | The update process will take 5 to 10 minutes. |
 |                                               |
 
-
-
 ## Build baseline images
 
 ### # Copy MDT boot images to Products file share
@@ -305,7 +297,6 @@ robocopy '\\ICEMAN\MDT-Build$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 ```
 
 ---
-
 
 **STORM**
 
@@ -317,7 +308,6 @@ robocopy '\\ICEMAN\MDT-Build$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -367,7 +357,6 @@ robocopy '\\ICEMAN\MDT-Build$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 
 ---
 
-
 **STORM**
 
 ### # Create temporary VM to build image (Windows Server 2012 R2 Standard - Baseline)
@@ -378,7 +367,6 @@ robocopy '\\ICEMAN\MDT-Build$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -481,7 +469,7 @@ Edit the task sequence to include the actions required to update the reference i
 3. Click **OK**.
 
 > **Note**
-> 
+>
 > The reason for adding the applications after the Tattoo action but before running Windows Update is simply to save time during the deployment. This way we can add all applications that will upgrade some of the built-in components and avoid unnecessary updating.
 
 Repeat the steps above for the **Windows Server 2012 R2 Standard** task sequence.
@@ -489,7 +477,6 @@ Repeat the steps above for the **Windows Server 2012 R2 Standard** task sequence
 ## Build baseline images
 
 ---
-
 
 **STORM**
 
@@ -501,7 +488,6 @@ Repeat the steps above for the **Windows Server 2012 R2 Standard** task sequence
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -597,7 +583,6 @@ Repeat the steps above for the **Windows Server 2012 R2 Standard** task sequence
 
 ---
 
-
 **STORM**
 
 ### # Create temporary VM to build image (Windows Server 2012 R2 Standard - Baseline)
@@ -608,7 +593,6 @@ Repeat the steps above for the **Windows Server 2012 R2 Standard** task sequence
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -834,7 +818,6 @@ Change the **/sequence/globalVarList/variable[@name="OSGUID"]** and **/sequence/
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -855,11 +838,9 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ## Build baseline images
 
 ---
-
 
 **STORM**
 
@@ -871,7 +852,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -1013,7 +993,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 **STORM**
 
 ### # Create temporary VM to build image (Windows Server 2012 R2 Standard - Baseline)
@@ -1024,7 +1003,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -1191,7 +1169,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 **STORM**
 
 ### # Create temporary VM to build image (Windows 8.1 Enterprise x64 - Baseline)
@@ -1202,7 +1179,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -1393,7 +1369,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 Reference:
 
-**Nice to Know – Get rid of all junk before Sysprep and Capture when creating a reference image in MDT**\
+**Nice to Know - Get rid of all junk before Sysprep and Capture when creating a reference image in MDT**\
 From <[https://anothermike2.wordpress.com/2014/06/05/nice-to-know-get-rid-of-all-junk-before-sysprep-and-capture-when-creating-a-reference-image-in-mdt/](https://anothermike2.wordpress.com/2014/06/05/nice-to-know-get-rid-of-all-junk-before-sysprep-and-capture-when-creating-a-reference-image-in-mdt/)>
 
 1. Download custom script: [http://1drv.ms/ThvLFE](http://1drv.ms/ThvLFE)
@@ -1436,7 +1412,6 @@ From <[https://anothermike2.wordpress.com/2014/06/05/nice-to-know-get-rid-of-all
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -1457,11 +1432,9 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ## Build baseline image (Windows 8.1 + Office 2013 + cleanup before Sysprep)
 
 ---
-
 
 **STORM**
 
@@ -1473,7 +1446,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -1689,7 +1661,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 cls
 ```
 
-## # Add applications - SQL Server 2014 Developer Edition and Visual Studio 2013 
+## # Add applications - SQL Server 2014 Developer Edition and Visual Studio 2013
 
 ### # Create application: SQL Server 2014 Developer Edition - x64 (Complete)
 
@@ -1796,7 +1768,7 @@ $commandLine = "vs_ultimate.exe /Quiet /NoRestart" `
 ```
 
 > **Important**
-> 
+>
 > You must specify the full path for the **AdminFile** parameter or else vs_ultimate.exe terminates with an error.
 
 ```PowerShell
@@ -1857,7 +1829,7 @@ $commandLine = "vs_ultimate.exe /Quiet /NoRestart" `
 ```
 
 > **Important**
-> 
+>
 > You must specify the full path for the **AdminFile** parameter or else vs_ultimate.exe terminates with an error.
 
 ```PowerShell
@@ -1871,7 +1843,6 @@ Import-MDTApplication `
 ```
 
 ---
-
 
 **WOLVERINE**
 
@@ -1900,7 +1871,6 @@ robocopy '\\ICEMAN\MDT-Build$\Applications\VS2013-Update4' '.\Main\MDT-Build$\Ap
 #### Check-in files
 
 ---
-
 
 ```PowerShell
 cls
@@ -2015,7 +1985,6 @@ Add applications to bundle (be sure to specify the following order):
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -2035,7 +2004,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 #### Check-in files
 
 ---
-
 
 ```PowerShell
 cls
@@ -2143,7 +2111,7 @@ PrerequisiteInstaller.exe %* ^
 ```
 
 > **Important**
-> 
+>
 > The prerequisite files are copied locally to avoid a prompt when running WcfDataServices.exe (despite unblocking that file in the network file share).
 
 ```PowerShell
@@ -2169,7 +2137,6 @@ Import-MDTApplication `
 ```
 
 ---
-
 
 **WOLVERINE**
 
@@ -2199,12 +2166,11 @@ robocopy '\\ICEMAN\MDT-Build$\Applications\SP2013-SP1' '.\Main\MDT-Build$\Applic
 
 ---
 
-
 ## Create task sequence for SharePoint 2013 development image
 
 ### Create task sequence - "SharePoint Server 2013 - Development"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**,** **right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
 2. Expand the **Task Sequences** node, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -2224,18 +2190,17 @@ robocopy '\\ICEMAN\MDT-Build$\Applications\SP2013-SP1' '.\Main\MDT-Build$\Applic
      - Internet Explorer Home Page: **about:blank**
    - Admin Password
      - **Use the specified local Administrator password.**
-     - Administrator Password:** **{password}****
+     - Administrator Password: **{password}**
 
 > **Important**
-> 
+>
 > The MSDN version of Windows Server 2012 R2 will prompt to enter a product key (but provide an option to skip this step). It does not honor the SkipProductKey=YES entry in the MDT CustomSettings.ini file.
 
 > **Important**
-> 
+>
 > Windows Server 2012 R2 with Update requires a password to be specified for the Administrator account (unlike Windows 8.1). If an Administrator password is not specified in the task sequence, the Lite Touch Installation will prompt for a password (which must be subsequently be entered manually when completing the actions specified in the task sequence).
 
 ---
-
 
 **WOLVERINE**
 
@@ -2263,7 +2228,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ```PowerShell
 cls
 ```
@@ -2275,7 +2239,6 @@ copy '\\ICEMAN\MDT-Build$\Control\WS2012-R2\ts.xml' '\\ICEMAN\MDT-Build$\Control
 ```
 
 ---
-
 
 **WOLVERINE**
 
@@ -2296,7 +2259,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 #### Check-in files
 
 ---
-
 
 ### # Identify Windows features for SharePoint 2013
 
@@ -2407,7 +2369,6 @@ Edit the task sequence to include the actions required to install SQL Server 201
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -2428,11 +2389,9 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ## Build baseline image (SharePoint Server 2013 - Development)
 
 ---
-
 
 **STORM**
 
@@ -2444,7 +2403,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -2695,7 +2653,6 @@ Edit the task sequence to enable the Windows Update actions.
 
 ---
 
-
 **WOLVERINE**
 
 ### # Update files in TFS
@@ -2716,11 +2673,9 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ## Build baseline image (SharePoint Server 2013 - Development)
 
 ---
-
 
 **STORM**
 
@@ -2732,7 +2687,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -3004,7 +2958,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
    1. **State Restore**
       1. In the **Custom Tasks (Pre-Windows Update)** group, after the **Install SharePoint Server 2013 with Service Pack 1 - Prerequisites** action, add a new **Run Command Line** action with the following settings:
          1. Name: **Remove SharePoint prerequisite files**
-         2. Command line: **PowerShell.exe -Command "& { Remove-Item C:\\PrerequisiteInstallerFiles_SP1 -Recurse -Force }"Note: **I originally attempted to use the following command line…rmdir /S /Q C:\\PrerequisiteInstallerFiles_SP1...but encountered numerous issues (despite adding "1" to the list of success codes -- since rmdir was found to return this value when deleting the folder). Consequently I switched to deleting the folder via PowerShell instead.
+         2. Command line: **PowerShell.exe -Command "& { Remove-Item C:\\PrerequisiteInstallerFiles_SP1 -Recurse -Force }"Note: **I originally attempted to use the following command line...rmdir /S /Q C:\\PrerequisiteInstallerFiles_SP1...but encountered numerous issues (despite adding "1" to the list of success codes -- since rmdir was found to return this value when deleting the folder). Consequently I switched to deleting the folder via PowerShell instead.
       2. After the **Apply Local GPO Package** action, add a new **Group** action with the following setting:
          1. Name: **Cleanup before Sysprep**
       3. In the **Cleanup before Sysprep **group, add a new **Group** action with the following setting:
@@ -3018,7 +2972,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 3. Click **OK**.
 
 ---
-
 
 **WOLVERINE**
 
@@ -3040,11 +2993,9 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ---
 
-
 ## Build baseline image (SharePoint Server 2013 - Development)
 
 ---
-
 
 **STORM**
 
@@ -3056,7 +3007,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -3357,7 +3307,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 2. Right-click the **Windows 8.1** folder and select **Import Operating System**.
 3. On the **OS Type** page, select **Custom image file** and click **Next**.
 4. On the **Image** page:
-   1. Click **Browse…**
+   1. Click **Browse...**
       1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\\ICEMAN\MDT-Build$\Captures).**
       2. Select the Windows 8.1 Enterprise x64 image, and click **Open**.
    2. Click** Next**.
@@ -3376,7 +3326,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 2. Right-click the **Windows Server 2012 R2** folder and select **Import Operating System**.
 3. On the **OS Type** page, select **Custom image file** and click **Next**.
 4. On the **Image** page:
-   1. Click **Browse…**
+   1. Click **Browse...**
       1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\\ICEMAN\MDT-Build$\Captures).**
       2. Select the Windows Server 2012 R2 image, and click **Open**.
    2. Click** Next**.
@@ -3394,7 +3344,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, expand the **Operating Systems** node, right-click the **Windows Server 2012 R2** folder and select **Import Operating System**.
 2. On the **OS Type** page, select **Custom image file** and click **Next**.
 3. On the **Image** page:
-   1. Click **Browse…**
+   1. Click **Browse...**
       1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\\ICEMAN\MDT-Build$\Captures).**
       2. Select the SharePoint 2013 development image, and click **Open**.
    2. Click** Next**.
@@ -3405,7 +3355,6 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 8. Double-click the new operating system name in the **Operating Systems / Windows Server 2012 R2** folder and change the name to **SharePoint 2013 - Development**.
 
 ---
-
 
 **WOLVERINE**
 
@@ -3427,12 +3376,11 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
 
 ---
 
-
 ## Create task sequences for deployments
 
 ### Create task sequence - "Windows 8.1 Enterprise x64"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**,** **right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
 2. Expand the **Task Sequences** node, right-click the **Windows 8.1** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -3454,7 +3402,7 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
 
 ### Create task sequence - "Windows Server 2012 R2 Standard"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**,** **right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
 2. Expand the **Task Sequences** node, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -3474,19 +3422,19 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
      - Internet Explorer Home Page: **about:blank**
    - Admin Password
      - **Use the specified local Administrator password.**
-     - Administrator Password:** **{password}****
+     - Administrator Password: **{password}**
 
 > **Important**
-> 
+>
 > The MSDN version of Windows Server 2012 R2 will prompt to enter a product key (but provide an option to skip this step). It does not honor the SkipProductKey=YES entry in the MDT CustomSettings.ini file.
 
 > **Important**
-> 
+>
 > Windows Server 2012 R2 with Update requires a password to be specified for the Administrator account (unlike Windows 8.1). If an Administrator password is not specified in the task sequence, the Lite Touch Installation will prompt for a password (which must be subsequently be entered manually when completing the actions specified in the task sequence).
 
 ### Create task sequence - "SharePoint Server 2013 - Development"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**,** **expand **Task Sequences**, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, expand **Task Sequences**, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 2. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
      - Task sequence ID: **SP2013-DEV**
@@ -3505,18 +3453,17 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
      - Internet Explorer Home Page: **about:blank**
    - Admin Password
      - **Use the specified local Administrator password.**
-     - Administrator Password:** **{password}****
+     - Administrator Password: **{password}**
 
 > **Important**
-> 
+>
 > The MSDN version of Windows Server 2012 R2 will prompt to enter a product key (but provide an option to skip this step). It does not honor the SkipProductKey=YES entry in the MDT CustomSettings.ini file.
 
 > **Important**
-> 
+>
 > Windows Server 2012 R2 with Update requires a password to be specified for the Administrator account (unlike Windows 8.1). If an Administrator password is not specified in the task sequence, the Lite Touch Installation will prompt for a password (which must be subsequently be entered manually when completing the actions specified in the task sequence).
 
 ---
-
 
 **WOLVERINE**
 
@@ -3538,7 +3485,6 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
 
 ---
 
-
 ```PowerShell
 cls
 ```
@@ -3554,7 +3500,6 @@ robocopy '\\ICEMAN\MDT-Deploy$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 
 ---
 
-
 **STORM**
 
 ### # Create temporary VM to build VM (Windows 8.1 Enterprise x64)
@@ -3565,7 +3510,6 @@ robocopy '\\ICEMAN\MDT-Deploy$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -3627,13 +3571,12 @@ robocopy '\\ICEMAN\MDT-Deploy$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$)) / Task Sequences / Windows 8.1 **folder, right-click **Windows 8.1 Enterprise x64 **and click **Properties**.
 2. On the **Task Sequence** tab, configure the following settings:
    1. **State Restore**
-      1. In the **Custom Tasks **group,** **add a new **Run Command Line **action with the following settings:
+      1. In the **Custom Tasks** group, add a new **Run Command Line** action with the following settings:
          1. Name: **Create native images for .NET assemblies**
-         2. Command line: **PowerShell.exe -Command "Get-ChildItem \$env:SystemRoot\\Microsoft.NET\\Ngen.exe -Recurse | % { & \$_ executeQueuedItems }"**
+         2. Command line: **PowerShell.exe -Command "Get-ChildItem \$env:SystemRoot\\Microsoft.NET\\Ngen.exe -Recurse | % { & \$\_ executeQueuedItems }"**
 3. Click **OK**.
 
 ---
-
 
 **STORM**
 
@@ -3645,7 +3588,6 @@ robocopy '\\ICEMAN\MDT-Deploy$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -3752,7 +3694,6 @@ From <[https://www.microsoft.com/en-us/download/details.aspx?id=36213](https://w
 
 ---
 
-
 **STORM**
 
 ### # Create temporary VM to build baseline image (Windows 7 Ultimate x86 - Baseline)
@@ -3763,7 +3704,6 @@ From <[https://www.microsoft.com/en-us/download/details.aspx?id=36213](https://w
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -4123,7 +4063,7 @@ Edit the task sequences to update the reference images with the latest updates f
 3. Click **OK**.
 
 > **Note**
-> 
+>
 > The reason for adding the applications after the Tattoo action but before running Windows Update is simply to save time during the deployment. This way we can add all applications that will upgrade some of the built-in components and avoid unnecessary updating.
 
 ### Configure task sequence - "Windows 7 Ultimate x64 - Baseline"
@@ -4133,7 +4073,6 @@ Repeat the steps in the previous section for the **Windows 7 Ultimate x64 - Base
 ## Build baseline Windows 7 image
 
 ---
-
 
 **STORM**
 
@@ -4145,7 +4084,6 @@ Repeat the steps in the previous section for the **Windows 7 Ultimate x64 - Base
 ```
 
 ---
-
 
 <table>
 <thead>
@@ -4556,5 +4494,3 @@ Repeat the steps in the previous section for the **Windows 7 Ultimate x64 - Base
 </td>
 </tr>
 </table>
-
-

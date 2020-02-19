@@ -58,7 +58,6 @@ netsh trace stop
 
 ---
 
-
 **WOLVERINE**
 
 ```PowerShell
@@ -78,7 +77,6 @@ robocopy $source $destination /MOVE
 ```
 
 ---
-
 
 ## # Copy Web server config files to Temp
 

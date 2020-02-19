@@ -24,7 +24,7 @@ Connect-AzAccount
 ```
 
 > **Note**
-> 
+>
 > Login as **jjameson-admin@technologytoolbox.com**
 
 ```PowerShell

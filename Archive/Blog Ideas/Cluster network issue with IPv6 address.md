@@ -7,7 +7,6 @@ Wednesday, January 11, 2017
 
 ---
 
-
 **FOOBAR8**
 
 ```PowerShell
@@ -28,7 +27,6 @@ Start-VM -ComputerName $vmHost -Name $vmName
 ```
 
 ---
-
 
 ```PowerShell
 cls
@@ -118,7 +116,7 @@ cls
 ### # Install Failover Clustering feature
 
 ```PowerShell
-Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
+Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
 ```
 
 ```PowerShell
@@ -132,7 +130,7 @@ Test-Cluster -Node TT-SQL01A, TT-SQL01B
 ```
 
 > **Note**
-> 
+>
 > Wait for the cluster validation tests to complete.
 
 ```PowerShell
@@ -140,9 +138,9 @@ Test-Cluster -Node TT-SQL01A, TT-SQL01B
 ```
 
 > **Note**
-> 
+>
 > The cluster validation report contains the following warnings:
-> 
+>
 > - **Network interface TT-SQL01A.corp.technologytoolbox.com - Datacenter 1 does not have an address with subnet prefix 172.16.0.0 / 24.**
 > - **Network interface TT-SQL01A.corp.technologytoolbox.com - Datacenter 1 does not have an address with subnet prefix fd66:d7e2:39d6:a4d9:: / 64.**
 > - **Network interface TT-SQL01A.corp.technologytoolbox.com - Cluster does not have an address with subnet prefix 192.168.10.0 / 24.**
@@ -151,11 +149,11 @@ Test-Cluster -Node TT-SQL01A, TT-SQL01B
 > - **Network interface TT-SQL01B.corp.technologytoolbox.com - Datacenter 1 does not have an address with subnet prefix fd66:d7e2:39d6:a4d9:: / 64.**
 > - **DHCP status for network interface TT-SQL01A.corp.technologytoolbox.com - Cluster differs from network Cluster Network 1.**
 > - **DHCP status for network interface TT-SQL01B.corp.technologytoolbox.com - Cluster differs from network Cluster Network 1.**
-> 
+>
 > Since I could not find a way to remove the automatically assigned IPv6 addresses (e.g. **2603:300b:802:8900:b0f0:22ba:d3a6:1ab6**), the only way I could resolve the cluster validation warnings is to change the secondary network adapters to use DHCP.
 
 > **Important**
-> 
+>
 > Change "Cluster" network adapters on TT-SQL01A and TT-SQL01B to use DHCP (for both IPv4 and IPv6) and then run the cluster validation tests again.
 
 ```PowerShell

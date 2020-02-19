@@ -16,7 +16,6 @@ Notepad.exe $PROFILE
 
 ---
 
-
 **Copy/paste the following content into Notepad:**
 
 ```PowerShell
@@ -93,7 +92,6 @@ Function Enable-SharePointCmdlets
 ```
 
 ---
-
 
 ```PowerShell
 $cert = Get-ChildItem Cert:\CurrentUser\My -CodeSigningCert

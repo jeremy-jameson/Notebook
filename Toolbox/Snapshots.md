@@ -54,7 +54,7 @@ net use \\tt-fs01.corp.technologytoolbox.com\IPC$ /USER:TECHTOOLBOX\jjameson
 ```
 
 > **Note**
-> 
+>
 > When prompted, type the password to connect to the file share.
 
 ```PowerShell
@@ -88,7 +88,6 @@ Remove-Item C:\Windows\SoftwareDistribution -Recurse
 
 ---
 
-
 **FOOBAR10**
 
 ```PowerShell
@@ -109,6 +108,3 @@ Start-VM -ComputerName $vmHost -Name $vmName
 ```
 
 ---
-
-
-

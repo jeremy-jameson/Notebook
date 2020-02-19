@@ -5,7 +5,7 @@ Sunday, April 07, 2013
 
 ## Mozilla Firefox
 
-**[Bug 857672](Bug 857672)** - Address Bar not working\
+**[Bug 857672](Bug 857672)** - Address Bar not working\
 Pasted from <[https://bugzilla.mozilla.org/show_bug.cgi?id=857672](https://bugzilla.mozilla.org/show_bug.cgi?id=857672)>
 
 [http://support.mozilla.org/en-US/questions/955424](http://support.mozilla.org/en-US/questions/955424)
@@ -35,7 +35,7 @@ In Notepad, change:
     prefix=${APPDATA}\npm
 ```
 
-…to:
+...to:
 
 ```Text
     ;prefix=${APPDATA}\npm

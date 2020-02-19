@@ -37,7 +37,6 @@ tf merge /discard /recursive Dev\VS2008 Main
 
 ---
 
-
 ```Console
 cd \NotBackedUp\Northwind\
 ```

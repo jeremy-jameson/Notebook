@@ -50,5 +50,3 @@ Get-SPServiceApplication |\
 where TypeName -ne "Security Token Service Application" |\
 where TypeName -ne "Application Discovery and Load Balancer Service Application" |\
 Remove-SPServiceApplication -RemoveData -Confirm:\$false
-
-

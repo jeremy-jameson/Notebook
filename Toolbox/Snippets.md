@@ -6,15 +6,14 @@ Tuesday, May 19, 2015
 **TODO:**
 
 > **Note**
-> 
+>
 > {note}
 
 > **Important**
-> 
+>
 > {note}
 
 ---
-
 
 **{SERVER}**
 
@@ -25,4 +24,3 @@ Get-Process
 ```
 
 ---
-

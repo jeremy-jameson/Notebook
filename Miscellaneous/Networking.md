@@ -67,17 +67,17 @@ Set-DhcpServerv4OptionValue `
     -Router 192.168.10.1
 
 Add-DhcpServerSecurityGroup
+
+Add-DhcpServerv4Scope `
+    -Name "Default Scope"`
+    -StartRange 192.168.10.2 `
+    -EndRange 192.168.10.100`
+    -SubnetMask 255.255.255.0
+
+Add-DhcpServerInDC -DNSName corp.technologytoolbox.com
 ```
 
-Add-DhcpServerv4Scope `\
--Name "Default Scope" `\
--StartRange 192.168.10.2 `\
--EndRange 192.168.10.100 `\
--SubnetMask 255.255.255.0
-
-```PowerShell
-Add-DhcpServerInDC -DNSName corp.technologytoolbox.com
-
+```Text
 WARNING: ...Failed to initiate the authorization check on the DHCP server. Error: There are no more endpoints available from the endpoint mapper.  (1753).
 ```
 

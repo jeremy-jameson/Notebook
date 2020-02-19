@@ -5,7 +5,7 @@ Wednesday, January 01, 2014
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/C5/39B76A472B8949D317AD9305B1222E0F714D36C5.png)
 
-**Hyper-V and Windows Server Backup – getting it to run fast**\
+**Hyper-V and Windows Server Backup - getting it to run fast**\
 Pasted from <[http://www.backupassist.com/blog/support/hyper-v-and-windows-server-backup-getting-it-to-run-fast/](http://www.backupassist.com/blog/support/hyper-v-and-windows-server-backup-getting-it-to-run-fast/)>
 
 ## Add backup disk
@@ -53,7 +53,7 @@ Click **Yes**.
 
 ## Discover iSCSI Target portal
 
-On the **Discovery** tab, in the **Target portals** section, click **Discover Portal…**
+On the **Discovery** tab, in the **Target portals** section, click **Discover Portal...**
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/01/5AF2023C517FB8FDD3FACC7214E310797B6A0401.png)
 
@@ -98,8 +98,8 @@ $chapUserName =
     "iqn.1991-05.com.microsoft:beast-test.corp.technologytoolbox.com"
 
 New-IscsiTargetPortal -TargetPortalAddress 10.1.10.106 `
-    –AuthenticationType OneWayCHAP `
-    –ChapUserName $chapUserName -ChapSecret {password}
+    -AuthenticationType OneWayCHAP `
+    -ChapUserName $chapUserName -ChapSecret {password}
 ```
 
 ## Configure CHAP on iSCSI Target
@@ -160,7 +160,7 @@ Add-WindowsFeature Windows-Server-Backup -IncludeManagementTools
 
 ## Backup server using scheduled backup options
 
-In the **Actions** pane, click **Backup Once…**
+In the **Actions** pane, click **Backup Once...**
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/9F/3F748A9AB88CE6B0BCD80D2D7DC9599A5681909F.png)
 
@@ -182,7 +182,7 @@ Start another backup
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/0B/50F8FA03AE7CCD6D739D8E9EC85C0F6B156B2A0B.png)
 
-**Hyper-V and Windows Server Backup – getting it to run fast**\
+**Hyper-V and Windows Server Backup - getting it to run fast**\
 Pasted from <[http://www.backupassist.com/blog/support/hyper-v-and-windows-server-backup-getting-it-to-run-fast/](http://www.backupassist.com/blog/support/hyper-v-and-windows-server-backup-getting-it-to-run-fast/)>
 
 ## # [ROGUE] Checkpoint VM
@@ -196,7 +196,7 @@ Start-VM BEAST-TEST
 ## Enable shadow copies on BEAST-TEST
 
 1. Open Windows Explorer.
-2. Right click **Local Disk (C:)** and then click **Configure Shadow Copies…**
+2. Right click **Local Disk (C:)** and then click **Configure Shadow Copies...**
 3. When prompted by UAT, click **Yes**.
 4. Click **Enable**.
 

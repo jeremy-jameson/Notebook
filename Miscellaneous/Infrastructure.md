@@ -67,17 +67,17 @@ Start-VM $vmName
 ## # Expand C: drive
 
 ```PowerShell
-$size = (Get-PartitionSupportedSize –DiskNumber 0 –PartitionNumber 2)
-Resize-Partition -DiskNumber 0 –PartitionNumber 2 -Size $size.SizeMax
+$size = (Get-PartitionSupportedSize -DiskNumber 0 -PartitionNumber 2)
+Resize-Partition -DiskNumber 0 -PartitionNumber 2 -Size $size.SizeMax
 ```
 
 ## Install Microsoft Office Professional Plus 2010 (x86)
 
-## Install Microsoft SharePoint Designer 2010 (x86) 
+## Install Microsoft SharePoint Designer 2010 (x86)
 
 ## Install Microsoft Visio Premium 2010 (x86)
 
-## # Install Adobe Reader 8.3 
+## # Install Adobe Reader 8.3
 
 ```PowerShell
 msiexec /i "\\ICEMAN\Products\Adobe\AdbeRdr830_en_US.msi" /q
@@ -85,7 +85,7 @@ msiexec /i "\\ICEMAN\Products\Adobe\AdbeRdr830_en_US.msi" /q
 msiexec /update "\\ICEMAN\Products\Adobe\AdbeRdrUpd831_all_incr.msp" /q
 ```
 
-## # Install Mozilla Firefox 36.0 
+## # Install Mozilla Firefox 36.0
 
 ## # Install Mozilla Thunderbird 31.3
 
@@ -97,9 +97,9 @@ msiexec /update "\\ICEMAN\Products\Adobe\AdbeRdrUpd831_all_incr.msp" /q
 msiexec /i "\\ICEMAN\Products\Google\Chrome\googlechromestandaloneenterprise.msi" /q
 ```
 
-## Install Remote Server Administration Tools for Windows 7 SP1 
+## Install Remote Server Administration Tools for Windows 7 SP1
 
-## Install Microsoft Security Essentials 
+## Install Microsoft Security Essentials
 
 ## Install updates
 

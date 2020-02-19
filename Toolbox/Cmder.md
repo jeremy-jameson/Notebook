@@ -4,7 +4,7 @@ Monday, October 8, 2018
 1:43 PM
 
 > **Important**
-> 
+>
 > My Cmder configuration is now documented on GitHub:\
 > [https://raw.githubusercontent.com/jeremy-jameson/Toolbox/master/Cmder/README.md](https://raw.githubusercontent.com/jeremy-jameson/Toolbox/master/Cmder/README.md)
 
@@ -29,7 +29,7 @@ Settings
       - **VS2015**
         - **cmd /k "%VS140COMNTOOLS%VsDevCmd.bat" -new_console:d:"C:\\NotBackedUp":t:"VS2015"**
       - **VS2017**
-        - **cmd /k "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"  -new_console:d:"C:\\NotBackedUp":t:"VS2017"**
+        - **cmd /k "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\Tools\\VsDevCmd.bat" -new_console:d:"C:\\NotBackedUp":t:"VS2017"**
 - Features
   - Transparency
     - Active window transparency: **disabled (unchecked)**
@@ -99,5 +99,3 @@ From <[http://chriskempson.com/projects/base16/](http://chriskempson.com/project
 
 **Nord - An arctic, north-bluish color palette**\
 From <[https://github.com/arcticicestudio/nord](https://github.com/arcticicestudio/nord)>
-
-

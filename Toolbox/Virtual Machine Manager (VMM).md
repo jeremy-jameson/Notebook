@@ -5,7 +5,6 @@ Friday, July 21, 2017
 
 ---
 
-
 **FOOBAR10 - Run as TECHTOOLBOX\\jjameson-admin**
 
 ```PowerShell
@@ -25,4 +24,3 @@ Get-SCVirtualDVDDrive -VM $vmName |
 ```
 
 ---
-

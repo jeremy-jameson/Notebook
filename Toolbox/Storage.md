@@ -10,10 +10,7 @@ Tuesday, May 19, 2015
 | 0    | C:           | 40 GB       | 4K                   | OSDisk       |
 | 1    | D:           | 2 GB        | 64K                  | Data01       |
 
-
-
 ---
-
 
 **FORGE**
 
@@ -40,7 +37,6 @@ Add-VMHardDiskDrive -VMName $vmName -ControllerType SCSI -Path $vhdPath
 ```
 
 ---
-
 
 ### # Expand C: partition
 

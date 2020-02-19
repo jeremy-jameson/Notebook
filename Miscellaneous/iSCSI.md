@@ -133,20 +133,20 @@ Try using PowerShell instead
 $chapUserName = "iqn.1991-05.com.microsoft:xavier1.corp.technologytoolbox.com"
 
 New-IscsiTargetPortal -TargetPortalAddress 10.1.10.106 `
-    –AuthenticationType OneWayCHAP `
-    –ChapUserName $chapUserName -ChapSecret {password}
+    -AuthenticationType OneWayCHAP `
+    -ChapUserName $chapUserName -ChapSecret {password}
 
-Get-iScsiTarget | Connect-iScsitarget –AuthenticationType OneWayCHAP `
-    –ChapUserName $chapUserName -ChapSecret {password}
+Get-iScsiTarget | Connect-iScsitarget -AuthenticationType OneWayCHAP `
+    -ChapUserName $chapUserName -ChapSecret {password}
 ```
 
-Connect-iScsitarget : Authentication Failure.\
-At line:1 char:19\
-+ Get-iScsiTarget | Connect-iScsitarget –AuthenticationType OneWayCHAP –ChapUserNa ...\
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
-    + CategoryInfo          : NotSpecified: (MSFT_iSCSITarget:ROOT/Microsoft/...SFT_iSCSITarget) [Connect-IscsiTarget]\
-   , CimException\
+```Text
+Connect-iScsitarget : Authentication Failure.
+At line:1 char:19
++ Get-iScsiTarget | Connect-iScsitarget -AuthenticationType OneWayCHAP -ChapUserNa ...
+    + CategoryInfo          : NotSpecified: (MSFT_iSCSITarget:ROOT/Microsoft/...SFT_iSCSITarget) [Connect-IscsiTarget], CimException
     + FullyQualifiedErrorId : HRESULT 0xefff0009,Connect-IscsiTarget
+```
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/FC/7798425A70F41A427A520AFCDB8F049B70374AFC.png)
 

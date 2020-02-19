@@ -3,7 +3,7 @@
 Wednesday, December 18, 2013
 9:49 PM
 
-**OpsMgr 2012 R2 – QuickStart Deployment Guide**\
+**OpsMgr 2012 R2 - QuickStart Deployment Guide**\
 Pasted from <[http://blogs.technet.com/b/kevinholman/archive/2013/10/18/opsmgr-2012-r2-quickstart-deployment-guide.aspx](http://blogs.technet.com/b/kevinholman/archive/2013/10/18/opsmgr-2012-r2-quickstart-deployment-guide.aspx)>
 
 **About Gateway Servers in Operations Manager**\
@@ -237,7 +237,7 @@ Click **Backup**.
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/16/3A5DFE80CC45E0FBC642E3897DDE99D3400FA916.png)
 
-[\\\\iceman\\Users\$\\jjameson-admin\\Documents\\Reporting Services - JUBILEE.snk](\\iceman\Users$\jjameson-admin\Documents\Reporting Services - JUBILEE.snk)
+[\\\\iceman\\Users\$\\jjameson-admin\\Documents\\Reporting Services - JUBILEE.snk](\\iceman\Users\$\jjameson-admin\Documents\Reporting Services - JUBILEE.snk)
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/D8/B62490B5FECF0C7E4D9FDF0A0511A45F606E89D8.png)
 
@@ -265,7 +265,7 @@ Install-WindowsFeature `
     Web-Asp-Net, `
     Web-Windows-Auth `
     -Source '\\ICEMAN\Products\Microsoft\Windows Server 2012 R2\Sources\SxS' `
-    –Restart
+    -Restart
 ```
 
 ## Create IIS Website for System Center
@@ -333,7 +333,7 @@ Set-VMMemory `
 Start-VM $vmName
 ```
 
-Same warning…
+Same warning...
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/EA/6B3BBD97A8DE48D64AE5FCD6C53DA172F08179EA.png)
 
@@ -358,9 +358,9 @@ Enabled firewall logging on HAVOK:
 #Fields: date time action protocol src-ip dst-ip src-port dst-port size tcpflags tcpsyn tcpack tcpwin icmptype icmpcode info path\
 ...\
 2014-01-07 13:04:10 DROP TCP 192.168.10.18 192.168.10.13 59576 135 52 S 4037609328 0 8192 - - - RECEIVE\
-…\
+...\
 2014-01-07 13:04:31 DROP TCP 192.168.10.18 192.168.10.13 59577 445 52 S 1121136589 0 8192 - - - RECEIVE\
-…\
+...\
 2014-01-07 13:04:38 DROP UDP 192.168.10.18 192.168.10.13 137 137 78 - - - - - - - RECEIVE
 
 **SCOM 2012 - Installing Operations Manager Database on server behind a firewall**\
@@ -483,7 +483,7 @@ Select the subscriber, click **Add **to move it to the **Selected subscribers** 
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/C6/0C667CFC5C473A69BC57DEC4209C4F9265C196C6.png)
 
-Click **Add…**
+Click **Add...**
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/2E/B0521D941540E599AAC3D4679E3109965A0D412E.png)
 
@@ -505,7 +505,7 @@ Click **Search**.
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/CC/230EADBEB038D883B242C4C7D63BF019FB463FCC.png)
 
-Click **Add** and then click **Add from catalog…**
+Click **Add** and then click **Add from catalog...**
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/A4/8D9865AC9F0EE48E64C9920B67894CB530A802A4.png)
 
@@ -647,7 +647,7 @@ In the **Agent Properties** window, on the **Security** tab, select **Allow this
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/67/D4BFF498629B584D761200225B2B7429063F9867.png)
 
-Click **Browse…**
+Click **Browse...**
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/45/F90A4C3D2ECB973475346F3389C8E552106E0B45.png)
 

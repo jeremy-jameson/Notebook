@@ -54,7 +54,7 @@ Microsoft SQL Server 2012 with SP1\
 WiX Toolset v3.7\
 Microsoft Office Professional Plus 2010
 
-**WIN7-TEST1  - Baseline**\
+**WIN7-TEST1 - Baseline**\
 Windows 7\
 Microsoft Office Professional Plus 2010\
 Microsoft SharePoint Designer 2010\
@@ -69,7 +69,7 @@ Activate Microsoft Office\
 Disk Cleanup\
 Internet Explorer 10
 
-**WIN7-TEST2  - Baseline**\
+**WIN7-TEST2 - Baseline**\
 Windows 7 (64-bit)\
 Microsoft Office Professional Plus 2010\
 Microsoft SharePoint Designer 2010\

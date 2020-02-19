@@ -38,5 +38,3 @@ REFERENCES Staging.UlsLog(LogId)\
 )
 
 GO
-
-

@@ -43,7 +43,6 @@ Tuesday, May 19, 2015
 
 ---
 
-
 **WOLVERINE**
 
 ```PowerShell
@@ -65,9 +64,7 @@ Get-VM |
 
 ---
 
-
 ---
-
 
 **FOOBAR18**
 
@@ -98,9 +95,7 @@ ForEach-Object {
 
 ---
 
-
 ---
-
 
 **FOOBAR8**
 
@@ -127,9 +122,7 @@ Start-VM -ComputerName $vmHost -Name $vmName
 
 ---
 
-
 ---
-
 
 **FOOBAR8**
 
@@ -160,11 +153,9 @@ Start-VM -ComputerName $vmHost -Name $vmName
 
 ---
 
-
 ## Misc
 
 ---
-
 
 **WOLVERINE - Run as Administrator**
 
@@ -187,9 +178,7 @@ Get-VM | Export-VM -Path $exportPath -Verbose
 
 ---
 
-
 ---
-
 
 **FOOBAR8**
 
@@ -216,9 +205,7 @@ $vmHosts | ForEach-Object {
 
 ---
 
-
 ---
-
 
 **FOOBAR8**
 
@@ -241,11 +228,9 @@ icacls . /restore AclFile
 
 ---
 
-
 ## VM startup configuration
 
 ---
-
 
 **FOOBAR8**
 
@@ -276,9 +261,7 @@ $vmHosts | ForEach-Object {
 
 ---
 
-
 ---
-
 
 **FOOBAR8**
 
@@ -299,11 +282,9 @@ Set-VM -ComputerName $vmHost `
 
 ---
 
-
 ## # Expand D: (Data01) drive
 
 ---
-
 
 **FOOBAR10 - Run as TECHTOOLBOX\\jjameson-admin**
 
@@ -325,7 +306,6 @@ Resize-VHD `
 ```
 
 ---
-
 
 ```PowerShell
 cls
@@ -353,10 +333,9 @@ Resize-Partition `
 
 4 GB of free space, but unable to install **2017-07 Cumulative Update for Windows Server 2016 for x64-based Systems (KB4025339)**.
 
-### Expand C: 
+### Expand C:
 
 ---
-
 
 **FOOBAR8**
 
@@ -383,7 +362,6 @@ Start-VM -ComputerName $vmHost -Name $vmName
 
 ---
 
-
 ```PowerShell
 cls
 ```
@@ -409,7 +387,6 @@ Resize-Partition `
 ## Move virtual machines
 
 ---
-
 
 **TT-HV02C**
 
@@ -470,9 +447,7 @@ $virtualMachines |
 
 ---
 
-
 ---
-
 
 **TT-VMM01A**
 
@@ -496,9 +471,7 @@ Move-SCVirtualMachine `
 
 ---
 
-
 ---
-
 
 **TT-VMM01A**
 
@@ -526,11 +499,9 @@ cls
 
 ---
 
-
 ## Create VM
 
 ---
-
 
 **FOOBAR10 - Run as TECHTOOLBOX\\jjameson-admin**
 
@@ -573,7 +544,6 @@ Start-VM -ComputerName $vmHost -Name $vmName
 
 ---
 
-
 ```PowerShell
 cls
 ```
@@ -581,13 +551,19 @@ cls
 ### # Create virtual machines
 
 ```PowerShell
-Function GetRandomMachineName([String] $prefix){    $name = [System.IO.Path]::GetRandomFileName()
+Function GetRandomMachineName([String] $prefix)
+{
+    $name = [System.IO.Path]::GetRandomFileName()
     $name = $name.ToUpper()
     $name = [System.IO.Path]::GetFileNameWithoutExtension($name)
 
-    If ([String]::IsNullOrWhiteSpace($name) -eq $false)    {        $name = $prefix + $name    }
+    If ([String]::IsNullOrWhiteSpace($name) -eq $false)
+    {
+        $name = $prefix + $name
+    }
 
-    return $name}
+    return $name
+}
 
 1..2 |
 % {

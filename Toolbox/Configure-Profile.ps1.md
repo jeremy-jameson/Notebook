@@ -9,7 +9,6 @@ Thursday, August 4, 2016
 
 ---
 
-
 **WOLVERINE**
 
 ```PowerShell
@@ -27,7 +26,6 @@ robocopy $sourcePath $destPath /E /MIR /XD "Microsoft SDKs"
 ```
 
 ---
-
 
 ```PowerShell
 cls

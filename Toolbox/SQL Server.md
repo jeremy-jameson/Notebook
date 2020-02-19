@@ -5,7 +5,6 @@ Tuesday, May 19, 2015
 
 ---
 
-
 **SQL Server Management Studio**
 
 ## Backup/restore
@@ -82,9 +81,7 @@ SELECT
 
 ---
 
-
 ---
-
 
 **SQL Server Management Studio**
 
@@ -241,7 +238,6 @@ ORDER BY
 ```
 
 ---
-
 
 ## # Restart SQL Server
 

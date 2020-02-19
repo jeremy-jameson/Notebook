@@ -9,7 +9,7 @@ Pasted from <[http://technet.microsoft.com/en-us/library/ee340124.aspx](http://t
 **Access denied error when configuring shared ISO feature on a VM using System Center Virtual Machine Manager 2008**\
 Pasted from <[http://support.microsoft.com/kb/2285882](http://support.microsoft.com/kb/2285882)>
 
-**Troubleshooting ISO file sharing in System Center Virtual Machine Manager 2012 SP1**\
+**Troubleshooting ISO file sharing in System Center Virtual Machine Manager 2012 SP1**\
 Pasted from <[http://morgansimonsen.wordpress.com/2013/08/30/troubleshooting-iso-file-sharing-in-system-center-virtual-machine-manager-2012-sp1/](http://morgansimonsen.wordpress.com/2013/08/30/troubleshooting-iso-file-sharing-in-system-center-virtual-machine-manager-2012-sp1/)>
 
 ## REM RDP to console

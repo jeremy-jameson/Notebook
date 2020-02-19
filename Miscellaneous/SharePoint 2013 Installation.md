@@ -67,9 +67,9 @@ Power down, delete old snapshot, and create a new snapshot (**Baseline SharePoin
 
 ## Backup Farm
 
-- ```PowerShell
-      Backup-SPFarm -Directory '\\iceman\Backups\SharePoint Farm' -BackupMethod Full
-  ```
+```PowerShell
+Backup-SPFarm -Directory '\\iceman\Backups\SharePoint Farm' -BackupMethod Full
+```
 
 [\\\\iceman\\Backups\\SharePoint Farm\\spbr0000](\\iceman\Backups\SharePoint Farm\spbr0000)
 
@@ -77,30 +77,37 @@ Power down, delete old snapshot, and create a new snapshot (**Baseline SharePoin
 
 Restore intranet Web application
 
-1. ```PowerShell
-       New-SPWebApplication -ApplicationPool "SharePoint - ttweb80" -Name "SharePoint - ttweb80" -ApplicationPoolAccount "TECHTOOLBOX\svc-ttweb" -AuthenticationMethod "NTLM" -HostHeader "ttweb" -Port 80 -Url "http://ttweb/"
-   ```
-2. ```PowerShell
-       Test-SPContentDatabase -Name WSS_Content_ttweb -WebApplication http://ttweb
-   ```
-3. ```PowerShell
-       Mount-SPContentDatabase -Name WSS_Content_ttweb -WebApplication http://ttweb
-   ```
+```PowerShell
+New-SPWebApplication -ApplicationPool "SharePoint - ttweb80" `
+    -Name "SharePoint - ttweb80" `
+    -ApplicationPoolAccount "TECHTOOLBOX\svc-ttweb" `
+    -AuthenticationMethod "NTLM" `
+    -HostHeader "ttweb" `
+    -Port 80 `
+    -Url "http://ttweb/"
+
+Test-SPContentDatabase -Name WSS_Content_ttweb -WebApplication http://ttweb
+
+Mount-SPContentDatabase -Name WSS_Content_ttweb -WebApplication http://ttweb
+```
 
 ## Upgrade the Secure Store service application
 
 Pasted from <[http://technet.microsoft.com/en-us/library/jj839719.aspx](http://technet.microsoft.com/en-us/library/jj839719.aspx)>
 
-1. ```PowerShell
-       $applicationPool = Get-SPServiceApplicationPool "SharePoint Service Applications"
-   ```
-2. ```PowerShell
-       $sss = New-SPSecureStoreServiceApplication -Name 'Secure Store Service' -ApplicationPool $applicationPool -DatabaseName 'Secure_Store_Service_DB' -AuditingEnabled
-   ```
+```PowerShell
+$applicationPool = Get-SPServiceApplicationPool "SharePoint Service Applications"
+
+$sss = New-SPSecureStoreServiceApplication `
+    -Name 'Secure Store Service' `
+    -ApplicationPool $applicationPool `
+    -DatabaseName 'Secure_Store_Service_DB' `
+    -AuditingEnabled
+```
 
 Error occurred in upgrade timer job. Detailed error from log file:
 
-ERROR	Sequence [Microsoft.Office.SecureStoreService.Server.Upgrade.SecureStoreDatabaseSequence] cannot upgrade an object [SecureStoreServiceDatabase Name=Secure_Store_Service_DB] whose build version [12.0.0.6421] is too old. Upgrade requires [14.0.4730.1010] or higher.	7facfe9b-61e1-105c-69ee-56e5959e0d7f
+ERROR Sequence [Microsoft.Office.SecureStoreService.Server.Upgrade.SecureStoreDatabaseSequence] cannot upgrade an object [SecureStoreServiceDatabase Name=Secure_Store_Service_DB] whose build version [12.0.0.6421] is too old. Upgrade requires [14.0.4730.1010] or higher. 7facfe9b-61e1-105c-69ee-56e5959e0d7f
 
 ## Configure Secure Store Service
 
@@ -108,9 +115,14 @@ ERROR	Sequence [Microsoft.Office.SecureStoreService.Server.Upgrade.SecureStoreDa
 
 Pasted from <[http://technet.microsoft.com/en-us/library/jj839719.aspx](http://technet.microsoft.com/en-us/library/jj839719.aspx)>
 
-1. ```PowerShell
-       New-SPMetadataServiceApplication -Name 'Managed Metadata Service' -ApplicationPool $applicationPool -DatabaseName 'ManagedMetadataService'
-   ```
-2. ```PowerShell
-       New-SPMetadataServiceApplicationProxy -Name 'Managed Metadata Service' -ServiceApplication $mms-DefaultProxyGroup
-   ```
+```PowerShell
+$mms = New-SPMetadataServiceApplication `
+    -Name 'Managed Metadata Service' `
+    -ApplicationPool $applicationPool `
+    -DatabaseName 'ManagedMetadataService'
+
+New-SPMetadataServiceApplicationProxy `
+    -Name 'Managed Metadata Service' `
+    -ServiceApplication $mms `
+    -DefaultProxyGroup
+```
