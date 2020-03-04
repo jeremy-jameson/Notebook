@@ -8,19 +8,19 @@ Tuesday, May 19, 2015
 ### # FABRIKAM domain
 
 ```PowerShell
-netdom resetpwd /s:FAB-DC01 /ud:FABRIKAM\jjameson-admin /pd:*
+netdom resetpwd /s:FAB-DC05 /ud:FABRIKAM\jjameson-admin /pd:*
 ```
 
 ### # EXTRANET domain
 
 ```PowerShell
-netdom resetpwd /s:EXT-DC08 /ud:EXTRANET\jjameson-admin /pd:*
+netdom resetpwd /s:EXT-DC10 /ud:EXTRANET\jjameson-admin /pd:*
 ```
 
 ### # TECHTOOLBOX domain
 
 ```PowerShell
-netdom resetpwd /s:TT-DC06 /ud:TECHTOOLBOX\jjameson-admin /pd:*
+netdom resetpwd /s:TT-DC10 /ud:TECHTOOLBOX\jjameson-admin /pd:*
 ```
 
 Pasted from <[http://www.technologytoolbox.com/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx](http://www.technologytoolbox.com/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx)>
