@@ -31,7 +31,7 @@ Function GetTasksToCommitFiles($commitMessage, $commitDate, $taskName = "Commit 
     CreateTaskObject $taskName "`$env:GIT_AUTHOR_DATE = '$commitDateInRfc2822Format'" $commitDate
     CreateTaskObject $taskName "`$env:GIT_COMMITTER_DATE = '$commitDateInRfc2822Format'" $commitDate
 
-    CreateTaskObject $taskName "git commit -m '$commitMessage'" $commitDate
+    CreateTaskObject $taskName "git commit -m `"$commitMessage`"" $commitDate
 }
 
 Function GetTasksToInitializeRepository($commitDate, $taskName = "Initialize Repository")
@@ -165,7 +165,7 @@ $files |
 
         $taskName = "Add File"
 
-        CreateTaskObject $taskName "git add '$relativePath'" $commitDate
+        CreateTaskObject $taskName "git add `"$relativePath`"" $commitDate
 
         GetTasksToCommitFiles $commitMessage $commitDate
     } |
