@@ -8,5 +8,8 @@
   "keywords": [],
   "author": "Jeremy Jameson",
   "license": "CC0-1.0",
-  "description": "My work notebook for Technology Toolbox (migrated from Microsoft OneNote)"
+  "description": "My work notebook for Technology Toolbox (migrated from Microsoft OneNote)",
+  "devDependencies": {
+    "prettier": "3.4.2"
+  }
 }
