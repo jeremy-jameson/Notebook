@@ -1,0 +1,12 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jeremy Jameson",
+  "license": "CC0-1.0",
+  "description": "My work notebook for Technology Toolbox (migrated from Microsoft OneNote)"
+}
