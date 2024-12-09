@@ -236,7 +236,7 @@ Start another backup
 
 ## Backup files on BEAST
 
-Backup the following folders on BEAST to [\\\\ICEMAN\\Temp](\\ICEMAN\Temp):
+Backup the following folders on BEAST to [\\\\ICEMAN\\Temp](\ICEMAN\Temp):
 
 - C:\\BackedUp
 - D:\\

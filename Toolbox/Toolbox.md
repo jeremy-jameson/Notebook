@@ -13,7 +13,7 @@ net use \\TT-FS01.corp.technologytoolbox.com\IPC$ /USER:TECHTOOLBOX\jjameson
 ```
 
 > **Note**
-> 
+>
 > When prompted, type the password to connect to the file share.
 
 ## # Copy Toolbox content
@@ -300,7 +300,6 @@ Get-VM | sort AutomaticStartDelay | % { $i = 0 } { Set-VM $_ -AutomaticStartDela
 
 ---
 
-
 **FORGE**
 
 ### # Create virtual machine
@@ -330,7 +329,6 @@ Start-VM $vmName
 ```
 
 ---
-
 
 ### Configure server settings
 
@@ -429,10 +427,10 @@ do {
     Start-Sleep -Seconds 5
 ```
 
-}  while (\$true)
+} while (\$true)
 
 > **Important**
-> 
+>
 > Ensure the **Status** property of the network team is **Up**.
 
 ```PowerShell
@@ -659,7 +657,7 @@ $computerName = "EXT-FOOBAR9.extranet.technologytoolbox.com"
 $source = "C:\NotBackedUp\Public\Toolbox\cmder"
 ```
 
-\$destination = "[\\\\\$computerName\\C`\$\\NotBackedUp\\Public\\Toolbox\\cmder](\\$computerName\C`$\NotBackedUp\Public\Toolbox\cmder)"
+\$destination = "[\\\\\$computerName\\C`\$\\NotBackedUp\\Public\\Toolbox\\cmder](\$computerName\C`$\NotBackedUp\Public\Toolbox\cmder)"
 
 ```Console
 robocopy $source $destination /E /XD "git-for-windows"

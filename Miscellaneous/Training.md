@@ -7,7 +7,7 @@ Thank you for claiming your voucher for 3-for-1 MCSD exams.
 
 **Your voucher number is DE00F4ZGES.**
 
-When you schedule and pay for the first exam using the above voucher code you’ll get the next 2 exams for free, valid on the following certification exams:
+When you schedule and pay for the first exam using the above voucher code youï¿½ll get the next 2 exams for free, valid on the following certification exams:
 
 - MCSD Windows Store Apps-HTML5: Exams 70-480, 70-481, 70-482
 - MCSD Web Applications: Exams 70-480, 70-486, 70-487

@@ -23,7 +23,7 @@ Write-Host ("Source directory: " + $imageDriveLetter + ":\")
 
 #### Import the operating system
 
-1. Open **Deployment Workbench**, expand the **Deployment Shares** node, and then expand **MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**.
+1. Open **Deployment Workbench**, expand the **Deployment Shares** node, and then expand **MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))**.
 2. Right-click the **Operating Systems** node, and create a new folder named **Windows 8.1**.
 3. Expand the **Operating Systems** node, right-click the **Windows 8.1** folder, and select **Import Operating System**.
 4. Use the following settings for the **Import Operating System Wizard**:
@@ -109,7 +109,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Create task sequence - "Windows 8.1 Enterprise x64 - Baseline"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
 2. Expand the **Task Sequences** node, right-click the **Windows 8.1** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -131,7 +131,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Create task sequence - "Windows Server 2012 R2 Standard - Baseline"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
 2. Expand the **Task Sequences** node, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -193,7 +193,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Configure MDT deployment settings
 
-1. Open **Deployment Workbench**, expand **Deployment Shares**, right-click** MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, and click** Properties.**
+1. Open **Deployment Workbench**, expand **Deployment Shares**, right-click** MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))**, and click** Properties.**
 2. On the **Rules** tab:
    1. Specify the following rules:
    2. Click **Edit Bootstrap.ini** and specify the following information:
@@ -280,7 +280,7 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 After the deployment share has been configured, it needs to be updated. This is the process when the Windows PE boot images are created.
 
-1. Open **Deployment Workbench**, right-click the **MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))** and click **Update Deployment Share**.
+1. Open **Deployment Workbench**, right-click the **MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))** and click **Update Deployment Share**.
 2. Use the default options for the **Update Deployment Share Wizard**.
 
 | **Note**                                      |
@@ -453,7 +453,7 @@ Edit the task sequence to include the actions required to update the reference i
       4. After the **Windows Update (Post-Application Installation)** action, rename **Custom Tasks** to **Custom Tasks (Post-Windows Update)**.
       5. Select **Custom Tasks (Pre-Windows Update)** and add a new **Run Command Line **action with the following settings:
          1. Name: **Copy Toolbox content from ICEMAN**
-         2. Command line: **robocopy [\\\\ICEMAN\\Public\\Toolbox](\\ICEMAN\Public\Toolbox) C:\\NotBackedUp\\Public\\Toolbox /E**
+         2. Command line: **robocopy [\\\\ICEMAN\\Public\\Toolbox](\ICEMAN\Public\Toolbox) C:\\NotBackedUp\\Public\\Toolbox /E**
          3. Success codes: **0 3010 1 2 3 4 5 6 7 8 16**
       6. Select **Custom Tasks (Pre-Windows Update)** and add a new **Install Roles and Features** action with the following settings:
          1. Name: **Install - Microsoft NET Framework 3.5**
@@ -1377,7 +1377,7 @@ From <[https://anothermike2.wordpress.com/2014/06/05/nice-to-know-get-rid-of-all
 
 #### Add custom action to execute the cleanup script
 
-1. Open **Deployment Workbench**, expand the **Deployment Shares** node, and then expand **MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**.
+1. Open **Deployment Workbench**, expand the **Deployment Shares** node, and then expand **MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))**.
 2. Right-click the **Applications **node, and create a new folder named **Actions**.
 3. Expand the **Applications **node, right-click the **Actions **folder, and click **New Application**.
 4. Use the following settings for the **New Application Wizard**:
@@ -1796,7 +1796,7 @@ cls
 
 #### # Create custom "AdminFile" for unattended Visual Studio 2013 installation for SP2013 development
 
-\$path = "[\\\\ICEMAN\\MDT-Build\$\\Applications\\VS2013-Update4](\\ICEMAN\MDT-Build$\Applications\VS2013-Update4)"
+\$path = "[\\\\ICEMAN\\MDT-Build\$\\Applications\\VS2013-Update4](\ICEMAN\MDT-Build$\Applications\VS2013-Update4)"
 
 ```PowerShell
 Copy-Item "$path\AdminDeployment.xml" "$path\AdminDeployment-SP2013-Dev.xml"
@@ -2170,7 +2170,7 @@ robocopy '\\ICEMAN\MDT-Build$\Applications\SP2013-SP1' '.\Main\MDT-Build$\Applic
 
 ### Create task sequence - "SharePoint Server 2013 - Development"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Build\$](\ICEMAN\MDT-Build$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
 2. Expand the **Task Sequences** node, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -3303,12 +3303,12 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Add custom image: Windows 8.1 Enterprise x64 - Baseline
 
-1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, right-click the **Operating Systems** node, and create a folder named **Windows 8.1**.
+1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$))**, right-click the **Operating Systems** node, and create a folder named **Windows 8.1**.
 2. Right-click the **Windows 8.1** folder and select **Import Operating System**.
 3. On the **OS Type** page, select **Custom image file** and click **Next**.
 4. On the **Image** page:
    1. Click **Browse...**
-      1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\\ICEMAN\MDT-Build$\Captures).**
+      1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\ICEMAN\MDT-Build$\Captures).**
       2. Select the Windows 8.1 Enterprise x64 image, and click **Open**.
    2. Click** Next**.
 5. On the **Setup** page:
@@ -3322,12 +3322,12 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Add custom image: Windows Server 2012 R2 Standard - Baseline
 
-1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, right-click the **Operating Systems** node, and create a folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$))**, right-click the **Operating Systems** node, and create a folder named **Windows Server 2012 R2**.
 2. Right-click the **Windows Server 2012 R2** folder and select **Import Operating System**.
 3. On the **OS Type** page, select **Custom image file** and click **Next**.
 4. On the **Image** page:
    1. Click **Browse...**
-      1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\\ICEMAN\MDT-Build$\Captures).**
+      1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\ICEMAN\MDT-Build$\Captures).**
       2. Select the Windows Server 2012 R2 image, and click **Open**.
    2. Click** Next**.
 5. On the **Setup** page:
@@ -3341,11 +3341,11 @@ robocopy \\ICEMAN\MDT-Build$ Main\MDT-Build$ /E /XD Applications Backup Boot Cap
 
 ### Add custom image: SharePoint 2013 - Development
 
-1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, expand the **Operating Systems** node, right-click the **Windows Server 2012 R2** folder and select **Import Operating System**.
+1. Open **Deployment Workbench**, expand the **Deployment Shares** node, expand **MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$))**, expand the **Operating Systems** node, right-click the **Windows Server 2012 R2** folder and select **Import Operating System**.
 2. On the **OS Type** page, select **Custom image file** and click **Next**.
 3. On the **Image** page:
    1. Click **Browse...**
-      1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\\ICEMAN\MDT-Build$\Captures).**
+      1. Browse to **[\\\\ICEMAN\\MDT-Build\$\\Captures](\ICEMAN\MDT-Build$\Captures).**
       2. Select the SharePoint 2013 development image, and click **Open**.
    2. Click** Next**.
 4. On the **Setup** page, ensure **Setup files are not needed** is selected, and click **Next**.
@@ -3380,7 +3380,7 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
 
 ### Create task sequence - "Windows 8.1 Enterprise x64"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$))**, right-click **Task Sequences**, and create a new folder named **Windows 8.1**.
 2. Expand the **Task Sequences** node, right-click the **Windows 8.1** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -3402,7 +3402,7 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
 
 ### Create task sequence - "Windows Server 2012 R2 Standard"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$))**, right-click **Task Sequences**, and create a new folder named **Windows Server 2012 R2**.
 2. Expand the **Task Sequences** node, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 3. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
@@ -3434,7 +3434,7 @@ robocopy \\ICEMAN\MDT-Deploy$ Main\MDT-Deploy$ /E /XD Applications Backup Boot C
 
 ### Create task sequence - "SharePoint Server 2013 - Development"
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$))**, expand **Task Sequences**, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Build Lab ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$))**, expand **Task Sequences**, right-click the **Windows Server 2012 R2** folder and select **New Task Sequence**.
 2. Use the following settings for the **New Task Sequence Wizard**:
    - General Settings
      - Task sequence ID: **SP2013-DEV**
@@ -3568,7 +3568,7 @@ robocopy '\\ICEMAN\MDT-Deploy$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 
 #### Add action to task sequence to create native images for .NET assemblies
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$)) / Task Sequences / Windows 8.1 **folder, right-click **Windows 8.1 Enterprise x64 **and click **Properties**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$)) / Task Sequences / Windows 8.1 **folder, right-click **Windows 8.1 Enterprise x64 **and click **Properties**.
 2. On the **Task Sequence** tab, configure the following settings:
    1. **State Restore**
       1. In the **Custom Tasks** group, add a new **Run Command Line** action with the following settings:
@@ -3679,7 +3679,7 @@ robocopy '\\ICEMAN\MDT-Deploy$\Boot' '\\ICEMAN\Products\Microsoft' *.iso
 
 #### Enable action to run Windows Update after installing applications
 
-1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\\ICEMAN\MDT-Deploy$)) / Task Sequences / Windows 8.1 **folder, right-click **Windows 8.1 Enterprise x64 **and click **Properties**.
+1. Open **Deployment Workbench**, expand **Deployment Shares / MDT Production ([\\\\ICEMAN\\MDT-Deploy\$](\ICEMAN\MDT-Deploy$)) / Task Sequences / Windows 8.1 **folder, right-click **Windows 8.1 Enterprise x64 **and click **Properties**.
 2. On the **Task Sequence** tab, configure the following settings:
    1. **State Restore**
       1. Enable the **Windows Update (Post-Application Installation)** action.
@@ -4035,7 +4035,7 @@ Edit the task sequences to update the reference images with the latest updates f
       4. After the **Windows Update (Post-Application Installation)** action, rename **Custom Tasks** to **Custom Tasks (Post-Windows Update)**.
       5. Select **Custom Tasks (Pre-Windows Update)** and add a new **Run Command Line **action with the following settings:
          1. Name: **Copy Toolbox content from ICEMAN**
-         2. Command line: **robocopy [\\\\ICEMAN\\Public\\Toolbox](\\ICEMAN\Public\Toolbox) C:\\NotBackedUp\\Public\\Toolbox /E**
+         2. Command line: **robocopy [\\\\ICEMAN\\Public\\Toolbox](\ICEMAN\Public\Toolbox) C:\\NotBackedUp\\Public\\Toolbox /E**
          3. Success codes: **0 3010 1 2 3 4 5 6 7 8 16**
       6. After the **Copy Toolbox content from ICEMAN** action, add a new **Install Roles and Features** action with the following settings:
          1. Name: **Install Microsoft NET Framework 3.5.1**

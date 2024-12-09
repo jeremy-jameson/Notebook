@@ -89,7 +89,7 @@ msiexec /update "\\ICEMAN\Products\Adobe\AdbeRdrUpd831_all_incr.msp" /q
 
 ## # Install Mozilla Thunderbird 31.3
 
-"[\\\\ICEMAN\\Products\\Mozilla\\Thunderbird\\Thunderbird](\\ICEMAN\Products\Mozilla\Thunderbird\Thunderbird) Setup 31.3.0.exe" -ms
+"[\\\\ICEMAN\\Products\\Mozilla\\Thunderbird\\Thunderbird](\ICEMAN\Products\Mozilla\Thunderbird\Thunderbird) Setup 31.3.0.exe" -ms
 
 ## # Install Google Chrome
 

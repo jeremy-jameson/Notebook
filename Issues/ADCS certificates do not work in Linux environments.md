@@ -5,7 +5,7 @@ Tuesday, May 14, 2019\
 
 ## References
 
-**RSASSA-PSS - Why Your Certificate Can’t Be Validated**\
+**RSASSA-PSS - Why Your Certificate Canï¿½t Be Validated**\
 From <[https://pkisolutions.com/pkcs1v2-1rsassa-pss/](https://pkisolutions.com/pkcs1v2-1rsassa-pss/)>
 
 **Microsoft PKI Checklist for 2016**\

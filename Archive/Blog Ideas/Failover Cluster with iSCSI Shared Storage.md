@@ -367,17 +367,17 @@ Set-DnsClientServerAddress `
 
 #### Physical disks
 
-| Disk | Model                     | Serial Number            | Capacity | Drive Letter | Volume Size | Allocation Unit Size | Volume Label |
-| ---- | ------------------------- | ------------------------ | -------- | ------------ | ----------- | -------------------- | ------------ |
-| 0    | WDC WD4002FYYZ-01B7CB0    | \*\*\*\*\*03Y            | 4 TB     |              |             |                      |              |
-| 1    | ST1000NM0033-9ZM173       | \*\*\*\*\*EMV            | 1 TB     |              |             |                      |              |
-| 2    | ST1000NM0033-9ZM173       | \*\*\*\*\*4YL            | 1 TB     |              |             |                      |              |
-| 3    | Samsung SSD 850 PRO 128GB | \*\*\*\*\*\*\*\*\*03705D | 128 GB   | C:           | 119 GB      | 4K                   |              |
-| 4    | Samsung SSD 850 PRO 512GB | \*\*\*\*\*\*\*\*\*10883Y | 512 GB   |              |             |                      |              |
-| 5    | Samsung SSD 850 PRO 512GB | \*\*\*\*\*\*\*\*\*10872K | 512 GB   |              |             |                      |              |
-| 6    | Samsung SSD 840 Series    | \*\*\*\*\*\*\*\*\*01728J | 512 GB   |              |             |                      |              |
-| 7    | Samsung SSD 840 Series    | \*\*\*\*\*\*\*\*\*45678J | 512 GB   |              |             |                      |              |
-| 8    | WDC WD4002FYYZ-01B7CB0    | \*\*\*\*\*0RY            | 4 TB     |              |             |                      |              |
+| Disk | Model | Serial Number | Capacity | Drive Letter | Volume Size | Allocation Unit Size | Volume Label |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0 | WDC WD4002FYYZ-01B7CB0 | \*\*\*\*\*03Y | 4 TB |  |  |  |  |
+| 1 | ST1000NM0033-9ZM173 | \*\*\*\*\*EMV | 1 TB |  |  |  |  |
+| 2 | ST1000NM0033-9ZM173 | \*\*\*\*\*4YL | 1 TB |  |  |  |  |
+| 3 | Samsung SSD 850 PRO 128GB | \*\*\*\*\*\*\*\*\*03705D | 128 GB | C: | 119 GB | 4K |  |
+| 4 | Samsung SSD 850 PRO 512GB | \*\*\*\*\*\*\*\*\*10883Y | 512 GB |  |  |  |  |
+| 5 | Samsung SSD 850 PRO 512GB | \*\*\*\*\*\*\*\*\*10872K | 512 GB |  |  |  |  |
+| 6 | Samsung SSD 840 Series | \*\*\*\*\*\*\*\*\*01728J | 512 GB |  |  |  |  |
+| 7 | Samsung SSD 840 Series | \*\*\*\*\*\*\*\*\*45678J | 512 GB |  |  |  |  |
+| 8 | WDC WD4002FYYZ-01B7CB0 | \*\*\*\*\*0RY | 4 TB |  |  |  |  |
 
 ```PowerShell
 Get-PhysicalDisk | sort DeviceId
@@ -411,18 +411,18 @@ PhysicalDisk8</p>
 
 #### Virtual disks
 
-| Name   | Layout | Provisioning | Capacity | SSD Tier | HDD Tier | Volume | Volume Label | Write-Back Cache |
-| ------ | ------ | ------------ | -------- | -------- | -------- | ------ | ------------ | ---------------- |
-| Data01 | Mirror | Fixed        | 200 GB   | 200 GB   |          | D:     | Data01       |                  |
-| Data02 | Mirror | Fixed        | 900 GB   | 200 GB   | 1200 GB  | E:     | Data02       | 5 GB             |
-| Data03 | Mirror | Fixed        | 600 GB   |          | 600 GB   | F:     | Data03       | 5 GB             |
+| Name | Layout | Provisioning | Capacity | SSD Tier | HDD Tier | Volume | Volume Label | Write-Back Cache |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Data01 | Mirror | Fixed | 200 GB | 200 GB |  | D: | Data01 |  |
+| Data02 | Mirror | Fixed | 900 GB | 200 GB | 1200 GB | E: | Data02 | 5 GB |
+| Data03 | Mirror | Fixed | 600 GB |  | 600 GB | F: | Data03 | 5 GB |
 
 #### Update AHCI drivers
 
 1. Download the latest AHCI drivers from the Intel website:\
-   **Intel® RSTe AHCI & SCU Software RAID driver for Windows**\
+   **Intelï¿½ RSTe AHCI & SCU Software RAID driver for Windows**\
    From <[https://downloadcenter.intel.com/download/25393/Intel-RSTe-AHCI-SCU-Software-RAID-driver-for-Windows-](https://downloadcenter.intel.com/download/25393/Intel-RSTe-AHCI-SCU-Software-RAID-driver-for-Windows-)>
-2. Extract the drivers (**[\\\\ICEMAN\\Public\\Download\\Drivers\\Intel\\RSTe](\\ICEMAN\Public\Download\Drivers\Intel\RSTe) AHCI & SCU Software RAID driver for Windows**) and copy the files to a temporary location on the server:
+2. Extract the drivers (**[\\\\ICEMAN\\Public\\Download\\Drivers\\Intel\\RSTe](\ICEMAN\Public\Download\Drivers\Intel\RSTe) AHCI & SCU Software RAID driver for Windows**) and copy the files to a temporary location on the server:
 3. Install the drivers for the **Intel(R) C600+/C220+ series chipset SATA AHCI Controller (PCI\\VEN_8086&DEV_8D02&...)**:
 4. Install the drivers for the **Intel(R) C600+/C220+ series chipset sSATA AHCI Controller (PCI\\VEN_8086&DEV_8D62&...)**:
 5. Restart the server.

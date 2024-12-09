@@ -3,15 +3,15 @@
 Tuesday, April 30, 2013\
 11:30 AM
 
-Log Name:      System\
-Source:        NETLOGON\
-Date:          4/30/2013 11:27:52 AM\
-Event ID:      5719\
+Log Name: System\
+Source: NETLOGON\
+Date: 4/30/2013 11:27:52 AM\
+Event ID: 5719\
 Task Category: None\
-Level:         Error\
-Keywords:      Classic\
-User:          N/A\
-Computer:      foobar9.corp.technologytoolbox.com\
+Level: Error\
+Keywords: Classic\
+User: N/A\
+Computer: foobar9.corp.technologytoolbox.com\
 Description:\
 This computer was not able to set up a secure session with a domain controller in domain TECHTOOLBOX due to the following:\
 There are currently no logon servers available to service the logon request.\

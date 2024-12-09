@@ -28,17 +28,17 @@ Pasted from <[http://blogs.technet.com/b/filecab/archive/2009/06/22/backup-versi
 **Volsnap Event ID: 25 and Loss of Previous Backups**\
 Pasted from <[http://social.technet.microsoft.com/Forums/windowsserver/en-US/204e8cce-cd1f-4ca2-852e-a5f09a77c04c/volsnap-event-id-25-and-loss-of-previous-backups?forum=windowsbackup](http://social.technet.microsoft.com/Forums/windowsserver/en-US/204e8cce-cd1f-4ca2-852e-a5f09a77c04c/volsnap-event-id-25-and-loss-of-previous-backups?forum=windowsbackup)>
 
-Log Name:      System\
-Source:        volsnap\
-Date:          12/21/2013 3:00:13 AM\
-Event ID:      25\
+Log Name: System\
+Source: volsnap\
+Date: 12/21/2013 3:00:13 AM\
+Event ID: 25\
 Task Category: None\
-Level:         Error\
-Keywords:      Classic\
-User:          N/A\
-Computer:      beast.corp.technologytoolbox.com\
+Level: Error\
+Keywords: Classic\
+User: N/A\
+Computer: beast.corp.technologytoolbox.com\
 Description:\
-The shadow copies of volume [\\\\?\\Volume{4152f97e-b029-41c9-96ce-efa1b6232e54}](\\?\Volume{4152f97e-b029-41c9-96ce-efa1b6232e54}) were deleted because the shadow copy storage could not grow in time.  Consider reducing the IO load on the system or choose a shadow copy storage volume that is not being shadow copied.\
+The shadow copies of volume [\\\\?\\Volume{4152f97e-b029-41c9-96ce-efa1b6232e54}](\?\Volume{4152f97e-b029-41c9-96ce-efa1b6232e54}) were deleted because the shadow copy storage could not grow in time. Consider reducing the IO load on the system or choose a shadow copy storage volume that is not being shadow copied.\
 Event Xml:
 
 ```XML
