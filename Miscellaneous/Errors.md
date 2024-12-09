@@ -1,6 +1,6 @@
-﻿# Errors
+# Errors
 
-Wednesday, September 05, 2012
+Wednesday, September 05, 2012\
 5:58 AM
 
 ```SQL

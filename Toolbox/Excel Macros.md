@@ -1,6 +1,6 @@
-﻿# Excel Macros
+# Excel Macros
 
-Thursday, May 31, 2012
+Thursday, May 31, 2012\
 12:56 PM
 
 ```VBScript

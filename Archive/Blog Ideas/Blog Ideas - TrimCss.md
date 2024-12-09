@@ -1,6 +1,6 @@
-﻿# TrimCss
+# TrimCss
 
-Thursday, April 05, 2012
+Thursday, April 05, 2012\
 6:13 AM
 
 ```C#

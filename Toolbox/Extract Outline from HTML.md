@@ -1,6 +1,6 @@
-﻿# Extract Outline from HTML
+# Extract Outline from HTML
 
-Tuesday, September 20, 2016
+Tuesday, September 20, 2016\
 4:49 PM
 
 ```XML

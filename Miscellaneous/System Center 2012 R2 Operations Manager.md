@@ -1,6 +1,6 @@
-﻿# System Center 2012 R2 Operations Manager
+# System Center 2012 R2 Operations Manager
 
-Wednesday, December 18, 2013
+Wednesday, December 18, 2013\
 9:49 PM
 
 **OpsMgr 2012 R2 - QuickStart Deployment Guide**\

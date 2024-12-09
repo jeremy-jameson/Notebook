@@ -1,6 +1,6 @@
-﻿# Blog Ideas
+# Blog Ideas
 
-Monday, February 20, 2012
+Monday, February 20, 2012\
 8:50 AM
 
 ## Localization

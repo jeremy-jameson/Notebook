@@ -1,6 +1,6 @@
-﻿# Cmder
+# Cmder
 
-Monday, October 8, 2018
+Monday, October 8, 2018\
 1:43 PM
 
 > **Important**

@@ -1,11 +1,11 @@
-﻿# ADCS certificates do not work in Linux environments
+# ADCS certificates do not work in Linux environments
 
-Tuesday, May 14, 2019
+Tuesday, May 14, 2019\
 10:05 AM
 
 ## References
 
-**RSASSA-PSS - Why Your Certificate Can’t Be Validated**\
+**RSASSA-PSS - Why Your Certificate Can�t Be Validated**\
 From <[https://pkisolutions.com/pkcs1v2-1rsassa-pss/](https://pkisolutions.com/pkcs1v2-1rsassa-pss/)>
 
 **Microsoft PKI Checklist for 2016**\

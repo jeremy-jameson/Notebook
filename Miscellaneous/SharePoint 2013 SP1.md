@@ -1,6 +1,6 @@
-﻿# SharePoint 2013 SP1
+# SharePoint 2013 SP1
 
-Monday, March 31, 2014
+Monday, March 31, 2014\
 2:27 PM
 
 ## POLARIS - Before SP1 installed

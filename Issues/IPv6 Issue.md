@@ -1,6 +1,6 @@
-﻿# IPv6 Issue
+# IPv6 Issue
 
-Thursday, October 02, 2014
+Thursday, October 02, 2014\
 4:32 AM
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/69/951F0F7F6D1537D30E81A7267F68ADFBA9A98869.png)

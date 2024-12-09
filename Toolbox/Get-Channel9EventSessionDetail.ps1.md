@@ -1,6 +1,6 @@
-﻿# Get-Channel9EventSessionDetail.ps1
+# Get-Channel9EventSessionDetail.ps1
 
-Monday, June 27, 2016
+Monday, June 27, 2016\
 4:45 PM
 
 ```PowerShell

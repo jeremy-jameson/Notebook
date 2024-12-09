@@ -1,6 +1,6 @@
-﻿# Windows Server 2012
+# Windows Server 2012
 
-Thursday, November 15, 2012
+Thursday, November 15, 2012\
 9:08 PM
 
 **Windows Server 2012 "Early Experts" Challenge**\

@@ -1,6 +1,6 @@
-﻿# DPM installation issue
+# DPM installation issue
 
-Wednesday, January 08, 2014
+Wednesday, January 08, 2014\
 11:58 AM
 
 ## Install Data Protection Manager using remote SQL Server

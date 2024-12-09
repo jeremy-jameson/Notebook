@@ -1,6 +1,6 @@
-﻿# Tugboat - Main Branch
+# Tugboat - Main Branch
 
-Wednesday, August 08, 2012
+Wednesday, August 08, 2012\
 3:57 PM
 
 ```PowerShell

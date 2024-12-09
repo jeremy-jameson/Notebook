@@ -1,6 +1,6 @@
-﻿# Azure Database Performance
+# Azure Database Performance
 
-Tuesday, February 9, 2016
+Tuesday, February 9, 2016\
 10:47 AM
 
 Time required to delete ~24K rows from Caelem database:

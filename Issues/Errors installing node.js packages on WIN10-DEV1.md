@@ -1,6 +1,6 @@
-﻿# Errors installing node.js packages on WIN10-DEV1
+# Errors installing node.js packages on WIN10-DEV1
 
-Friday, June 26, 2015
+Friday, June 26, 2015\
 8:55 AM
 
 ## Install node.js packages

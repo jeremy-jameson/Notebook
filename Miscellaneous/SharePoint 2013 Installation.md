@@ -1,6 +1,6 @@
-﻿# SharePoint 2013 Installation
+# SharePoint 2013 Installation
 
-Tuesday, February 12, 2013
+Tuesday, February 12, 2013\
 5:27 AM
 
 On the database server (BEAST), use SQL Server Management Studio to set the **Max degree of parallelism** to **1**.\

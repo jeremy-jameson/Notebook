@@ -1,6 +1,6 @@
-﻿# Add Files to Git
+# Add Files to Git
 
-Thursday, August 31, 2017
+Thursday, August 31, 2017\
 5:58 AM
 
 ## Import Files to Git.ps1

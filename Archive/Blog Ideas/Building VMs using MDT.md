@@ -1,6 +1,6 @@
-﻿# Building VMs using MDT
+# Building VMs using MDT
 
-Tuesday, April 14, 2015
+Tuesday, April 14, 2015\
 10:04 AM
 
 ## # Add setup files for Windows 8.1 and Windows Server 2012 R2

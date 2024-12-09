@@ -1,6 +1,6 @@
-﻿# Troubleshooting
+# Troubleshooting
 
-Tuesday, June 02, 2015
+Tuesday, June 02, 2015\
 7:40 AM
 
 ## Fiddler debugging

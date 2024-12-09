@@ -1,6 +1,6 @@
-﻿# Snapshots
+# Snapshots
 
-Tuesday, May 19, 2015
+Tuesday, May 19, 2015\
 11:03 AM
 
 ## # Reset machine password

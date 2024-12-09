@@ -1,6 +1,6 @@
-﻿# Toolbox
+# Toolbox
 
-Tuesday, April 09, 2013
+Tuesday, April 09, 2013\
 6:08 AM
 
 **7 Must-Have (Free) Mobile Apps to do Your Job Better**\

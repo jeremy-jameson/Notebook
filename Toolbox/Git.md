@@ -1,6 +1,6 @@
-﻿# Git
+# Git
 
-Saturday, December 16, 2017
+Saturday, December 16, 2017\
 5:22 AM
 
 ## # Configure basic Git options

@@ -1,6 +1,6 @@
-﻿# VMM setup error
+# VMM setup error
 
-Thursday, January 12, 2017
+Thursday, January 12, 2017\
 11:02 AM
 
 ## Create failover cluster names in Active Directory

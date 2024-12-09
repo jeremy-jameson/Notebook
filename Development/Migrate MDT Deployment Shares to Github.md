@@ -1,6 +1,6 @@
-﻿# Migrate MDT Deployment Shares to Github
+# Migrate MDT Deployment Shares to Github
 
-Saturday, June 1, 2019
+Saturday, June 1, 2019\
 4:01 PM
 
 ## Compare folders to ensure identical copies of files

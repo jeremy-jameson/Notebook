@@ -1,6 +1,6 @@
-﻿# Microservices with ASP.NET Core
+# Microservices with ASP.NET Core
 
-Saturday, October 19, 2019
+Saturday, October 19, 2019\
 5:34 AM
 
 ## Docker

@@ -1,6 +1,6 @@
-﻿# Virtual Machine Manager (VMM)
+# Virtual Machine Manager (VMM)
 
-Friday, July 21, 2017
+Friday, July 21, 2017\
 10:01 AM
 
 ---

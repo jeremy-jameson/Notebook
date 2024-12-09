@@ -1,6 +1,6 @@
-﻿# Popular Posts
+# Popular Posts
 
-Monday, July 01, 2013
+Monday, July 01, 2013\
 7:27 AM
 
 **How to Build a Popularity Algorithm You can be Proud of**\

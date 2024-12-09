@@ -1,6 +1,6 @@
-﻿# Azure Subscription
+# Azure Subscription
 
-Saturday, July 2, 2016
+Saturday, July 2, 2016\
 7:10 AM
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/3F/368D1BF856D544BAB764530D68B45E246B4CA93F.png)

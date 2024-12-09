@@ -1,6 +1,6 @@
-﻿# Networking
+# Networking
 
-Thursday, January 09, 2014
+Thursday, January 09, 2014\
 10:11 AM
 
 ## DHCP/DNS issues

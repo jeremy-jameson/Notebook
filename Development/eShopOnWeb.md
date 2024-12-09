@@ -1,6 +1,6 @@
-﻿# eShopOnWeb
+# eShopOnWeb
 
-Thursday, October 3, 2019
+Thursday, October 3, 2019\
 5:39 PM
 
 ```PowerShell

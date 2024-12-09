@@ -1,6 +1,6 @@
-﻿# NETLOGON 5719 errors
+# NETLOGON 5719 errors
 
-Tuesday, April 30, 2013
+Tuesday, April 30, 2013\
 11:30 AM
 
 Log Name:      System\

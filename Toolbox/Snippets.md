@@ -1,6 +1,6 @@
-﻿# Snippets
+# Snippets
 
-Tuesday, May 19, 2015
+Tuesday, May 19, 2015\
 11:05 AM
 
 **TODO:**

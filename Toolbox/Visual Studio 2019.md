@@ -1,6 +1,6 @@
-﻿# Visual Studio 2019
+# Visual Studio 2019
 
-Wednesday, April 3, 2019
+Wednesday, April 3, 2019\
 4:25 AM
 
 ## Download Visual Studio 2019

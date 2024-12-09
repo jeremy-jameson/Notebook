@@ -1,6 +1,6 @@
-﻿# Team Build issues
+# Team Build issues
 
-Sunday, December 02, 2012
+Sunday, December 02, 2012\
 5:14 AM
 
 "Build partially succeeded" but no obvious errors --> "No Test results" in build report

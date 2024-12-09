@@ -1,6 +1,6 @@
-﻿# Visual Studio 2017
+# Visual Studio 2017
 
-Wednesday, March 8, 2017
+Wednesday, March 8, 2017\
 10:05 AM
 
 **Create an offline installer for Visual Studio 2017**\

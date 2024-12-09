@@ -1,6 +1,6 @@
-﻿# PowerShell
+# PowerShell
 
-Tuesday, May 19, 2015
+Tuesday, May 19, 2015\
 11:08 AM
 
 ## PowerShell profile

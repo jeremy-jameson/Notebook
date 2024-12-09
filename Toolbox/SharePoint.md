@@ -1,6 +1,6 @@
-﻿# SharePoint
+# SharePoint
 
-Tuesday, June 02, 2015
+Tuesday, June 02, 2015\
 6:30 AM
 
 ```PowerShell

@@ -1,6 +1,6 @@
-﻿# SQL Server 2012 Upgrade
+# SQL Server 2012 Upgrade
 
-Wednesday, February 06, 2013
+Wednesday, February 06, 2013\
 9:51 AM
 
 Source: TFS Services\

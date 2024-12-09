@@ -1,6 +1,6 @@
-﻿# Northwind Demo
+# Northwind Demo
 
-Sunday, December 02, 2012
+Sunday, December 02, 2012\
 3:23 AM
 
 ```Console

@@ -1,6 +1,6 @@
-﻿# SharePoint 2013 bug when rebuilding POLARIS-DEV
+# SharePoint 2013 bug when rebuilding POLARIS-DEV
 
-Tuesday, October 27, 2015
+Tuesday, October 27, 2015\
 5:43 PM
 
 ```Text

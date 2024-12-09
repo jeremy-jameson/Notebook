@@ -1,6 +1,6 @@
-﻿# Reporting Services issue
+# Reporting Services issue
 
-Friday, January 10, 2014
+Friday, January 10, 2014\
 9:23 AM
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/DC/7E59AC049C8D8D30D394C12558584787FE8088DC.png)

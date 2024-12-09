@@ -1,6 +1,6 @@
-﻿# Disk Benchmarks
+# Disk Benchmarks
 
-Friday, December 27, 2013
+Friday, December 27, 2013\
 6:43 AM
 
 ## ICEMAN

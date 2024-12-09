@@ -1,6 +1,6 @@
-﻿# Removing a network adapter in Server Core
+# Removing a network adapter in Server Core
 
-Thursday, January 09, 2014
+Thursday, January 09, 2014\
 10:09 AM
 
 ## Remove network adapter

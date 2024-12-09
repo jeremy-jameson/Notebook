@@ -1,6 +1,6 @@
-﻿# SharePoint 2013 Development VM
+# SharePoint 2013 Development VM
 
-Thursday, February 14, 2013
+Thursday, February 14, 2013\
 10:05 AM
 
 cd C:\\NotBackedUp\\Public\\Toolbox\\PowerShell\

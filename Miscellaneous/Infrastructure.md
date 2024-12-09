@@ -1,6 +1,6 @@
-﻿# Infrastructure
+# Infrastructure
 
-Wednesday, April 08, 2015
+Wednesday, April 08, 2015\
 1:41 PM
 
 ```PowerShell

@@ -1,6 +1,6 @@
-﻿# Configure-Profile.ps1
+# Configure-Profile.ps1
 
-Thursday, August 4, 2016
+Thursday, August 4, 2016\
 2:41 PM
 
 ```Text

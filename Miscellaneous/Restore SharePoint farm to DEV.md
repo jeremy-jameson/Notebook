@@ -1,6 +1,6 @@
-﻿# Restore SharePoint farm to DEV
+# Restore SharePoint farm to DEV
 
-Saturday, February 21, 2015
+Saturday, February 21, 2015\
 6:03 PM
 
 <table>

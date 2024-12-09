@@ -1,6 +1,6 @@
-﻿# Fabrikam Demo - SharePointExtranet Branch
+# Fabrikam Demo - SharePointExtranet Branch
 
-Saturday, March 31, 2012
+Saturday, March 31, 2012\
 5:29 AM
 
 ## Setup

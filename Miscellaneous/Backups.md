@@ -1,6 +1,6 @@
-﻿# Backups
+# Backups
 
-Wednesday, January 01, 2014
+Wednesday, January 01, 2014\
 5:24 PM
 
 ![(screenshot)](https://assets.technologytoolbox.com/screenshots/C5/39B76A472B8949D317AD9305B1222E0F714D36C5.png)

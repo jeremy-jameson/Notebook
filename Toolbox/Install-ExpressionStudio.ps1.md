@@ -1,6 +1,6 @@
-﻿# Install-ExpressionStudio.ps1
+# Install-ExpressionStudio.ps1
 
-Thursday, August 4, 2016
+Thursday, August 4, 2016\
 5:33 PM
 
 ```Text

@@ -1,6 +1,6 @@
-﻿# OPB's - Other People's Bugs
+# OPB's - Other People's Bugs
 
-Sunday, April 07, 2013
+Sunday, April 07, 2013\
 8:26 AM
 
 ## Mozilla Firefox

@@ -1,6 +1,6 @@
-﻿# Failover Cluster with iSCSI Shared Storage
+# Failover Cluster with iSCSI Shared Storage
 
-Saturday, January 28, 2017
+Saturday, January 28, 2017\
 5:14 AM
 
 ```Text
@@ -420,7 +420,7 @@ PhysicalDisk8</p>
 #### Update AHCI drivers
 
 1. Download the latest AHCI drivers from the Intel website:\
-   **Intel® RSTe AHCI & SCU Software RAID driver for Windows**\
+   **Intel� RSTe AHCI & SCU Software RAID driver for Windows**\
    From <[https://downloadcenter.intel.com/download/25393/Intel-RSTe-AHCI-SCU-Software-RAID-driver-for-Windows-](https://downloadcenter.intel.com/download/25393/Intel-RSTe-AHCI-SCU-Software-RAID-driver-for-Windows-)>
 2. Extract the drivers (**[\\\\ICEMAN\\Public\\Download\\Drivers\\Intel\\RSTe](\\ICEMAN\Public\Download\Drivers\Intel\RSTe) AHCI & SCU Software RAID driver for Windows**) and copy the files to a temporary location on the server:
 3. Install the drivers for the **Intel(R) C600+/C220+ series chipset SATA AHCI Controller (PCI\\VEN_8086&DEV_8D02&...)**:

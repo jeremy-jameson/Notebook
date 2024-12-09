@@ -1,6 +1,6 @@
-﻿# PowerShell to set SPListItem properties
+# PowerShell to set SPListItem properties
 
-Sunday, April 01, 2012
+Sunday, April 01, 2012\
 3:13 PM
 
 ## Set Source URL in SharePoint

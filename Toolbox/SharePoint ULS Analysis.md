@@ -1,6 +1,6 @@
-﻿# SharePoint ULS Analysis
+# SharePoint ULS Analysis
 
-Friday, June 17, 2016
+Friday, June 17, 2016\
 9:01 AM
 
 USE SharePointAnalysis\

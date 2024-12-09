@@ -1,6 +1,6 @@
-﻿# Hyper-V
+# Hyper-V
 
-Tuesday, May 19, 2015
+Tuesday, May 19, 2015\
 11:07 AM
 
 ## Start VMs

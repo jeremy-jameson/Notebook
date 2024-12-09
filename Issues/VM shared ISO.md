@@ -1,6 +1,6 @@
-﻿# VM shared ISO
+# VM shared ISO
 
-Monday, February 17, 2014
+Monday, February 17, 2014\
 8:16 AM
 
 **How to Enable Shared ISO Images for Hyper-V Virtual Machines in VMM**\

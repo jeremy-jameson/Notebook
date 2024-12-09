@@ -1,6 +1,6 @@
-﻿# WSUS
+# WSUS
 
-Saturday, January 12, 2019
+Saturday, January 12, 2019\
 9:26 AM
 
 Slow cleanup

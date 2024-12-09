@@ -1,6 +1,6 @@
-﻿# Fabrikam Demo - EmployeePortal Branch
+# Fabrikam Demo - EmployeePortal Branch
 
-Saturday, March 31, 2012
+Saturday, March 31, 2012\
 5:29 AM
 
 ## Visual Studio command prompt

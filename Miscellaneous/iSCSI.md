@@ -1,6 +1,6 @@
-﻿# iSCSI
+# iSCSI
 
-Sunday, May 26, 2013
+Sunday, May 26, 2013\
 11:27 AM
 
 **Introduction of iSCSI Target in Windows Server 2012**\

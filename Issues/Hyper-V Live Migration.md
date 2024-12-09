@@ -1,6 +1,6 @@
-﻿# Hyper-V Live Migration
+# Hyper-V Live Migration
 
-Monday, February 17, 2014
+Monday, February 17, 2014\
 8:16 AM
 
 ## REM RDP to console

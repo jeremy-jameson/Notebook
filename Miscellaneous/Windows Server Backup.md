@@ -1,6 +1,6 @@
-﻿# Windows Server Backup
+# Windows Server Backup
 
-Saturday, November 02, 2013
+Saturday, November 02, 2013\
 9:58 AM
 
 ```Text

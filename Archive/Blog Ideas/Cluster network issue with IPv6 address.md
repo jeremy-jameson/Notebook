@@ -1,6 +1,6 @@
-﻿# Cluster network issue with IPv6 address
+# Cluster network issue with IPv6 address
 
-Wednesday, January 11, 2017
+Wednesday, January 11, 2017\
 5:24 AM
 
 ## Configure failover clustering (for SQL Server AlwaysOn Availability Group)

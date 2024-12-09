@@ -1,6 +1,6 @@
-﻿# Visual Studio Renewal
+# Visual Studio Renewal
 
-Wednesday, January 17, 2018
+Wednesday, January 17, 2018\
 12:41 PM
 
 Support Case: 9001445690

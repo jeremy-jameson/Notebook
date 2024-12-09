@@ -1,6 +1,6 @@
-﻿# SQL Server
+# SQL Server
 
-Tuesday, May 19, 2015
+Tuesday, May 19, 2015\
 11:06 AM
 
 ---
